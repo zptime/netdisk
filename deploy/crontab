@@ -1,0 +1,3 @@
+*/3 * * * * . /opt/virt/netdisk/bin/activate && python /opt/virt/netdisk/netdisk/manage.py sync_user_data
+0 3 * * * . /opt/virt/netdisk/bin/activate && python /opt/virt/netdisk/netdisk/manage.py clearsessions
+0 1 * * * . /opt/virt/netdisk/bin/activate && python /opt/virt/netdisk/netdisk/manage.py uploadlog

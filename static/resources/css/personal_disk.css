@@ -1,0 +1,54 @@
+.untreated_title{
+	font-size: 18px;
+}
+
+.untreatedArea{
+	padding: 0;
+}
+.untreated{
+	position: relative;
+	width: 100%;
+	min-height: 100px;
+	background-color: #f2f2f2;
+	padding: 0;
+	margin-bottom: 20px;
+}
+.untreated_title{
+	font-size: 18px;
+}
+
+
+.untreated_left{
+	float: left;
+	height: inherit;
+    display: block;
+}
+.untreated img{
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	border-radius:30px
+}
+
+
+.untreated_right{
+	display: grid;
+}
+.untreated_right span{
+	display: block;
+	padding-top: 10px;
+}
+.untreated_statu{
+	position: absolute;
+	top: 12px;
+	right: 30px;
+	margin: 0 auto;
+    width: 66px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 20px;
+	background-color: #fd5555;
+}

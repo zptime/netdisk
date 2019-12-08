@@ -1,0 +1,45 @@
+{% extends 'page/index.html' %}
+{% block hx-extendlink %}{% endblock %}
+{% block hx-extendcontent %}
+    <div class="statistics">
+        <div class="operate-top">
+            <span class="operate-title">XXX的统计</span>
+            <div class="button-back">返回</div>
+        </div>
+        <div class="statistics-msg">
+            <div class="item">
+                <div class="item-num">45份</div>
+                <div class="item-txt">收集数据总量</div>
+            </div>
+            <div class="item">
+                <div class="item-num">45份</div>
+                <div class="item-txt">收集数据总量</div>
+            </div>
+            <div class="item">
+                <div class="item-num">45份</div>
+                <div class="item-txt">收集数据总量</div>
+            </div>
+            <div class="item" style="margin-right: 0;">
+                <div class="item-num">45份</div>
+                <div class="item-txt">收集数据总量</div>
+            </div>
+        </div>
+        <div style="margin: 0 20px;">
+            <span>上传状态</span>
+            <input type="text">
+            <span>至</span>
+            <input type="text">
+        </div>
+        <div id="zxt" style="min-height: 100px;margin: 20px">
+
+        </div>
+        <div class="clb nav-items" style="position: relative;width: 300px;border: solid 1px #4685ff;border-radius: 4px;text-align: center;margin: 20px auto;line-height: 30px;">
+            <div class="fl item " style="width: 150px;">已上传人员</div>
+            <div class="fl item active" style="width: 150px;" >未上传人员</div>
+        </div>
+        <div style="line-height: 300px;font-size: 24px;text-align: center">
+            这里是表格
+        </div>
+    </div>
+{% endblock %}
+{% block hx-extendscript %}{% endblock %}

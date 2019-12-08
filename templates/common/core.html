@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block hx-title %}{% endblock %}
+    <script>
+        /*PV量统计*/
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?"+ {% block pv %}{% endblock %}+""; /* Math.random() */
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        /**VERSION**/
+        (function () {
+            var release = false;
+            if (release){
+                window.hxcom = {
+                    "version": '1.0.4'
+                }
+            } else{
+                window.hxcom = {
+                    "version": Math.random()
+                };
+            }
+        })();
+    </script>
+    <script>
+        document.write('<link rel="stylesheet" href="/static/resources/common/pub/mCustomScrollbar/css/jquery.mCustomScrollbar.css?version=' +  hxcom.version + '" /> ');
+        document.write('<link rel="stylesheet" href="/static/resources/common/resources/common.css?version=' +  hxcom.version + '" /> ');
+        document.write('<link rel="shortcut icon" href="/static/resources/common/resources/images/icon-huaxiao.png?version=' +  hxcom.version + '" /> ');
+    </script>
+    {% block hx-link %}{% endblock %}
+</head>
+<body>
+    <div>
+        <input type="hidden" id="USER_CENTER_URL">
+    </div>
+    {% block hx-common-head %}
+    <div class="hx-head">
+        <div class="hx-frame-width">
+            <span class="hx-logo hx-float-l">
+                <span>
+                    <img class="hx-logo-img" src="/static/resources/common/resources/images/icon-logo.png">
+                </span>
+                <span class="hx-clear"></span>
+                <span class="hx-logo-text">{% block hx-logo-text %}华校{% endblock %}</span>
+            </span>
+            <span class="hx-logo hx-float-l hx-margin80-l mytooltip-logo">
+                <span id="hx-app-group">
+                    <span class="hx-logo-app">{% block app-name %}{% endblock %}</span>
+                    <span class="hx-logo-triangle">
+                        <img id="hx-logo-triangle-default" src="/static/resources/common/resources/images/icon-triangle-d-white.png">
+                        <img id="hx-logo-triangle-visited" hidden="hidden" src="/static/resources/common/resources/images/icon-triangle-u-white.png">
+                    </span>
+                </span>
+            </span>
+            <span class="hx-account hx-float-r mytooltip-acc">
+                <span>
+                    <img class="hx-account-img">
+                </span>
+                <span class="hx-account-text">
+                    <span class="hx-box hx-account-text-1"></span>
+                    <span class="hx-box hx-account-text-2"></span>
+                </span>
+                <span class="hx-account-triangle">
+                    <img id="hx-account-triangle-default" src="/static/resources/common/resources/images/icon-triangle-d-white.png">
+                    <img id="hx-account-triangle-visited" hidden="hidden" src="/static/resources/common/resources/images/icon-triangle-u-white.png">
+                </span>
+                <input type="hidden" value="" id="current_school_id">
+                <input type="hidden" value="" id="current_type_id">
+            </span>
+            <div hidden="hidden" class="hx-app-list-container mytooltip-logo">
+                <div class="hx-inner-box">
+
+            </div>
+            </div>
+            <div hidden="hidden" class="hx-layer-account-container mytooltip-acc">
+                {% include 'common/layer_account.html' %}
+            </div>
+            <!--身份管理-->
+            {% include 'common/layer_class.html' %}
+            <!--身份管理-->
+            {% include 'common/layer_identity.html' %}
+            <!--教材管理-->
+            {% include 'common/layer_textbook.html' %}
+            {% block hx-head-extend %}{% endblock %}
+        </div>
+    </div>
+    {% endblock %}
+    <div class="hx-content">
+        {% block hx-custom-outerbefore %}{% endblock %}
+        <div class="hx-frame-width">
+            <!-- custom content -->
+            {% block hx-custom %}{% endblock %}
+        </div>
+    </div>
+    <div class="hx-foot">
+        Copyright © 2015-2020 湖北省武汉市 All Rights Reserved.
+    </div>
+</body>
+<script src="/static/resources/common/pub/jquery.min.js"></script>
+<script src="/static/resources/common/pub/jquery.showLoading.min.js"></script>
+<script src="/static/resources/common/pub/mCustomScrollbar/js/jquery.mousewheel.min.js"></script>
+<script src="/static/resources/common/pub/mCustomScrollbar/js/jquery.mCustomScrollbar.js"></script>
+<script src="/static/resources/common/pub/layer/layer.js"></script>
+<script src="/static/resources/common/pub/vue.js"></script>
+<script>
+     document.write('<script src="/static/resources/common/resources/common.js?rnd='+ hxcom.version +'"><'+'/script>')
+     document.write('<script src="/static/resources/js/base/utils.js?rnd='+ hxcom.version +'"><'+'/script>')
+</script>
+{% block hx-script %}{% endblock %}
+</html>

@@ -1,0 +1,320 @@
+﻿
+/*CSS Reset*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, legend, button, input, textarea,
+th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button, input, select, textarea {
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    color: #333;
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+h1, h2, h3, h4, h5, h6 {font-weight: 400;}
+
+address, cite, dfn, em, var,i { font-style: normal; }
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; }
+small { font-size: 12px; }
+
+ul, ol { list-style: none; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+abbr[title], acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+input:focus {border: none;outline: none;}
+q:before, q:after { content: ''; }
+
+legend { color: #000; }
+fieldset, img { border: none; }
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+textarea {outline: none;resize: none;}
+::-webkit-input-placeholder {
+    color:#999;
+}
+:-moz-placeholder {
+    color:#999;
+}
+::-moz-placeholder {
+    color:#999;
+}
+:-ms-input-placeholder {
+    color:#999;
+}
+
+.clearfix:after { content:""; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+
+.fl {float: left;}
+.fr {float: right;}
+
+.pr {position: relative;}
+.pab {position: absolute;}
+
+.hide {display: none!important;}
+.show {display: block!important;}
+.dsn {display: none;}
+.dsb {display: block;}
+.overflow {overflow: hidden;}
+.bd {border-bottom: 1px solid #ededed;}
+
+.tc {text-align: center;}
+.tl {text-align: left;}
+.tr {text-align: right;}
+
+.line_height35 {line-height: 35px;height:35px;}
+.line_height45 {line-height: 45px;}
+.line_height8 {line-height: 8px!important;}
+.fw700 {font-weight: 700;}
+.mt15 {margin-top: 15px;}
+.mb10 {margin-bottom: 10px;}
+.pb50 {padding-bottom: 50px;}
+.pl50 {padding-left: 50px;}
+.pl30 {padding-left: 30px;}
+.pr20 {padding-right: 20px;}
+.pr8 {padding-right: 8px;}
+.height_30 {height: 30px;}
+
+/* 登录模块 */
+.L_header, .L_footer, .L_main, .L_img {width: 100%;}
+.L_header {
+    height: 80px;
+    background-color: #308ce3;
+}
+.L_wrap, .outWrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+.logo {
+    padding-left: 95px;
+    line-height: 80px;
+}
+.logo img {vertical-align: middle;}
+.L_main {
+    position: relative;
+    height: 600px; /*临时高度*/
+    display: flex;
+    align-items: center;
+}
+.L_img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top:0px;
+}
+.L_footer {
+    background-color: #f4f4f4;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+.contain {
+    *padding-top:12%;
+    padding-top: 12%\9;
+}
+.loginLeft {
+    float: left;
+}
+.loginRight {
+    float: right;
+    width: 283px;
+    height:321px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 2px 3px rgba(0,0,0,.3);
+    box-shadow: 0 2px 3px rgba(0,0,0,.3);
+}
+.logoV {
+    height: 110px;
+    line-height: 110px;
+    text-align:center;
+}
+.logoV img {vertical-align: middle;}
+.form-horizontal {
+    text-align: center;
+    padding-left:22px;
+}
+.size {
+    width: 236px;
+    height: 35px;
+}
+.form-group {
+    position: relative;
+    border:1px solid #ccc;
+    margin-bottom: 15px;
+}
+.form-group i {
+    position: absolute;
+    top:10px;
+    left: 7px;
+    background-image: url(/static/resources/images/login/icon_login.png);
+    background-repeat: no-repeat;
+    width:15px;
+    height:17px;
+}
+.head-icon {
+    background-position: 0 0;
+}
+.psw-icon {
+    background-position: 0 -51px;
+}
+.form-control {
+    border: none;
+    width:100%;
+    vertical-align: middle;
+}
+.submit-btn {
+    background-color: #308ce3;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+.bdn {border: none!important;}
+.mb30 {margin-bottom: 30px;}
+.pl27 {padding-left: 27px;}
+.forgot-psw {
+    padding-left: 22px;
+}
+.forgot-psw i {
+    position: absolute;
+    top:-1px;
+    left:30px;
+    width:15px;
+    height:15px;
+}
+.check-psw {
+    padding-left: 30px;
+}
+.checkBtn {
+    background: url("/static/resources/images/login/change.png");
+}
+.checkedBtn {
+    background: url("/static/resources/images/login/change_press.png");
+
+}
+.forgot-rt {
+    float: right;
+    padding-right:24px;
+}
+.forgot-rt:hover{
+    float: right;
+    text-decoration: underline;
+    padding-right:24px;
+}
+.error_text {
+    color: #ff0000;
+    line-height: 30px;
+}
+/*找回密码*/
+.bgColoreee {background-color: #eee;}
+.find_head {
+    padding: 0 9px 0 40px;
+    height:127px;
+}
+.f-title {
+    margin-top:66px;
+}
+.f-login {
+    margin-top:98px;
+    color: #308ce3;
+    font-size: 14px;
+}
+.outWrap {
+    background-color: #fff;
+    height: 620px;
+}
+.find-psw {
+    text-align: center;
+    vertical-align: middle;
+}
+.form {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 14px;
+}
+.find-title {
+    color: #333;
+    font-size: 18px;
+    padding-top: 80px;
+    padding-bottom: 93px;
+    text-align:center;
+}
+.width-height {
+    width: 323px;
+    height: 45px;
+}
+.getYzm {
+    position: absolute;
+    top:10px;
+    right:0px;
+    color: #308ce3;
+    border-left: 1px solid #ccc;
+    padding:5px 12px;
+}
+.pl15 {padding-left:15px;}
+.next {
+    background-color: #308ce3;
+    color: #fff;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+}
+.warning {
+    position: absolute;
+    left: 345px;
+    top: 15px;
+    width: 201px;
+    text-align: left;
+    font-size: 14px;
+    color: red;
+}
+.forgotOne {
+    display: block;
+}
+

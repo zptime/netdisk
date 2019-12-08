@@ -1,0 +1,100 @@
+
+body .layui-layer-border{box-shadow:1px 1px 5px rgba(0,0,0,.2)}
+body .demo-class {-moz-border-radius: 6px;  -webkit-border-radius: 4px;border-radius: 4px;}
+body .demo-class .layui-layer-title{background:#f1f1f1; color:#666666; border: none;font-size:16px;border-radius: 4px 4px 0 0;}
+body .demo-class .layui-layer-content{text-align:center;color:#666666;height:auto !important;}
+body .demo-class .layui-layer-btn{margin-top:10px;}
+body .demo-class .layui-layer-btn a{font-size:14px;text-decoration: none; -moz-border-radius: 6px;  -webkit-border-radius: 6px;  width:48px;text-align: center; }
+body .demo-class .layui-layer-btn0 {background:#308ce3;border:1px solid #e5e5e5;color:#e5e5e5;margin-right:10px;}
+body .demo-class .layui-layer-btn1{background:#308ce3;color:#e5e5e5;}
+
+
+.table{padding-top:10px;padding-left:20px;}
+.table tr{border:1px solid red;}
+.table tr td{text-align: left;padding-left:20px;}
+input[type="text"],input[type="number"]{border:1px solid #e5e5e5;width:220px;height:30px;border-radius: 4px;margin-top:5px;}
+
+/*ѡ���꼶�ؼ�*/
+#gradeList{width:500px;margin-top:10px;margin-left: 48px;display:none;}
+.list-title{width:inherit;height:40px;}
+.list-title-total{font-size: 14px;color:#444444;float:left;}
+.list-title-search{float: right;margin-top:4px;}
+#search{width:150px;height: 24px;background: url("/static/resources/images/icon/icon-search.png") no-repeat right center;}
+
+.grade-list-form{text-align:left;border:1px solid #dcdcdc;height:276px;width:inherit;margin-top: 10px;font-size: 14px;}
+.list-form-grade{overflow:auto;width:486px;height:inherit;border-right:1px solid #dcdcdc;display: inline-block;float:left;}
+.list-form-grade ul{list-style-type: none;margin: 0;padding: 0;width:inherit;}
+.list-form-grade ul li{width:inherit;height: 38px;border-bottom:1px solid #dcdcdc;}
+.list-form-grade ul li input[type="checkbox"]{margin:10px 15px 0 30px;width:14px;float: left;}
+.list-form-grade ul li label{margin-top:6px;display:block;}
+#gradeList .li-check-all{height: 30px;border-bottom: 1px solid #dcdcdc;padding:12px 15px 0 26px;}
+#gradeList .li-check-all input{margin-right:12px;width:22px;}
+.list-form-scroll{width:13px;height:inherit;float:right;border-bottom: 1px solid #dcdcdc;}
+
+#gradeList .mCSB_scrollTools{width:14px;}
+#gradeList .grade-list-form .mCSB_scrollTools .mCSB_draggerRail{background-color: #ffffff;}
+#gradeList .grade-list-form .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#cacaca;width:4px;}
+#gradeList .grade-list-form .mCSB_inside > .mCSB_container{margin-right: 0px;}
+
+
+/*ѡ��ѧ���ؼ�*/
+#studentList{width:500px;margin-top:10px;margin-left: 48px;display:none;}
+
+.student-list-form{text-align:left;border:1px solid #dcdcdc;height:364px;width:inherit;margin-top: 10px;font-size: 14px;}
+.list-form-common{overflow:auto;height:inherit;border-right:1px solid #dcdcdc;display: inline-block;float:left;}
+.list-form-grade-2{width:120px;background-color: #f2f2f2;}
+.list-form-grade-2 li{width: 107px;}
+.list-form-grade-2 li:hover{background-color: #ffffff;}
+.list-form-class{width:150px;background-color: #f2f2f2;}
+.list-form-class li{width: 136px;}
+.list-form-class li:hover{background-color: #ffffff;}
+.list-form-student{width:227px;border-right: none;}
+.list-form-student li{margin:0;width: 212px;border-right: 1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;}
+.list-form-student li:hover{background-color: #eeeeee;}
+.list-form-student li img{width:28px;height: 28px;margin:4px 5px 0 0;display:block;float:left;}
+.list-form-student li input[type="checkbox"]{float: left;}
+.list-form-student li label{display: inline-block;margin-top:10px;}
+
+.list{list-style-type: none;margin: 0;padding: 0;}
+.list li{height: 36px;}
+.list li input[type="checkbox"]{width:14px;margin:12px;}
+.list li label{}
+#studentList .li-check-all{height: 40px;}
+#studentList .li-check-all:hover{background-color: #ffffff;}
+.li-check-all-student:hover{background-color: #eeeeee;}
+.li-check-all-grade{width:107px;}
+.li-check-all-student{border-right: 1px solid #dcdcdc;width:212px;border-bottom: 1px solid #dcdcdc;}
+.li-check-all-class{width:136px;}
+#studentList .li-check-all input[type="checkbox"]{width:14px;margin:14px;}
+.list-form-scroll{width:13px;height:inherit;float:right;border-bottom: 1px solid #dcdcdc;}
+
+#studentList .student-list-form .mCSB_scrollTools{width:12px;}
+#studentList .student-list-form .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#cacaca;width:4px;height: 250px;}
+#studentList .student-list-form .mCSB_inside > .mCSB_container{margin-right: 0px;}
+#studentList .list-form-grade-2 .mCSB_scrollTools .mCSB_draggerRail{background-color: #f2f2f2;}
+#studentList .list-form-class .mCSB_scrollTools .mCSB_draggerRail{background-color: #f2f2f2;}
+#studentList .list-form-student .mCSB_scrollTools .mCSB_draggerRail{background-color: #ffffff;}
+
+/**��Ӳ���ѡ��ѧ��**/
+#exclue-studentList{width:500px;margin-top:10px;margin-left: 48px;display:none;}
+.list-title{width:inherit;height:40px;}
+.list-title-total{font-size: 14px;color:#444444;float:left;}
+.list-title-search{float: right;margin-top:4px;}
+#search{width:150px;height: 24px;background: url("/static/resources/images/icon/icon-search.png") no-repeat right center;}
+
+.exclue-student-list-form{text-align:left;border:1px solid #dcdcdc;height:276px;width:inherit;margin-top: 10px;font-size: 14px;}
+.list-form-exclue-student{overflow:auto;width:486px;height:inherit;border-right:1px solid #dcdcdc;display: inline-block;float:left;}
+.list-form-exclue-student .title{height: 28px;background-color: #e5e5e5;padding: 0px 30px;vertical-align: middle;line-height: 28px;font-weight: bold;}
+.list-form-exclue-student ul{list-style-type: none;margin: 0;padding: 0;width:inherit;}
+.list-form-exclue-student ul li{width:inherit;height: 38px;border-bottom:1px solid #dcdcdc;}
+.list-form-exclue-student ul li input[type="checkbox"]{margin:10px 15px 0 30px;width:14px;float: left;}
+.list-form-exclue-student ul li label{margin-top:6px;display:block;}
+#exclue-studentList .li-check-all{height: 30px;border-bottom: 1px solid #dcdcdc;padding:12px 15px 0 26px;}
+#exclue-studentList .li-check-all input{margin-right:12px;width:22px;}
+.list-form-scroll{width:13px;height:inherit;float:right;border-bottom: 1px solid #dcdcdc;}
+
+#exclue-studentList .mCSB_scrollTools{width:14px;}
+#exclue-studentList .exclue-student-list-form .mCSB_scrollTools .mCSB_draggerRail{background-color: #ffffff;}
+#exclue-studentList .exclue-student-list-form .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#cacaca;width:4px;}
+#exclue-studentList .exclue-student-list-form .mCSB_inside > .mCSB_container{margin-right: 0px;}
+

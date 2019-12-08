@@ -1,0 +1,41 @@
+{% extends 'common/core.html' %}
+{% block hx-title %}
+    <title>网盘系统</title>
+{% endblock %}
+{% block hx-link %}
+    <link rel="stylesheet" href="/static/resources/common/pub/ztree/css/zTreeStyle.css">
+    <script>
+        document.write('<link rel="stylesheet" href="/static/resources/css/index.css?version='+hxcom.version+'">');
+    </script>
+    {% block hx-extendlink %}{% endblock %}
+{% endblock %}
+{% block hx-custom-outerbefore %}
+    <div class="outerbefore-top">
+        <div class="outerbefore-title">文件柜</div>
+        <div class="outerbefore-navbox">
+            <div class="outerbefore-navitem"><a href="/html/index">学校网盘</a></div>
+            <div class="outerbefore-navitem"><a href="/html/document/statistics">学校网盘分析</a></div>
+            <div class="outerbefore-navitem"><a href="">个人网盘</a></div>
+        </div>
+        <div class="outerbefore-message">
+            <div class="item1">个人网盘容量</div>
+            <div class="item2">
+                <div class="item-inner"></div>
+            </div>
+            <div class="item3">2.4G/10G</div>
+        </div>
+    </div>
+{% endblock %}
+{% block hx-custom %}
+    <div class="content-main">
+        {% block hx-extendcontent %}{% endblock %}
+    </div>
+{% endblock %}
+{% block hx-script %}
+    <script src="/static/resources/common/pub/ztree/js/jquery.ztree.all.min.js"></script>
+    <script src="/static/resources/common/pub/chooseDepartAndUser.js"></script>
+    <script>
+         document.write('<script src="/static/resources/js/index.js?rnd='+ hxcom.version +'"><'+'/script>')
+    </script>
+    {% block hx-extendscript %}{% endblock %}
+{% endblock %}

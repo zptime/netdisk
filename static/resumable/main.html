@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <div>
+      <a href="#" id="browseButton" >Select files</a>
+    </div>
+
+    <div>
+        <input id="btnCancel" type="button" onClick='r.pause()'value="Cancel All Uploads"
+            style="margin-left: 2px; height: 22px; font-size: 8pt;" /><br/>
+    </div>
+
+    <script src="/static/resumable/resumable.js"></script>
+    <script>
+    var r = new Resumable({
+      target:'/api/upload/resumable',
+      chunkSize:1024*1024,
+      simultaneousUploads:1,
+      testChunks:true,
+      throttleProgressCallbacks:1,
+
+    });
+
+    r.assignBrowse(document.getElementById('browseButton'));
+
+    r.on('fileSuccess', function(file){
+       // console.debug(file);
+      });
+    r.on('fileProgress', function(file){
+       // console.debug(file);
+      });
+    r.on('fileAdded', function(file, event){
+        r.upload();
+        //console.debug(file, event);
+      });
+    r.on('fileRetry', function(file){
+        //console.debug(file);
+      });
+    r.on('fileError', function(file, message){
+        //console.debug(file, message);
+      });
+    r.on('uploadStart', function(){
+        //console.debug();
+      });
+    r.on('complete', function(){
+        //console.debug();
+      });
+    r.on('progress', function(){
+        //console.debug();
+      });
+    r.on('error', function(message, file){
+        //console.debug(message, file);
+      });
+    r.on('pause', function(file,message){
+        //console.debug();
+
+      });
+    r.on('cancel', function(){
+        //console.debug();
+      });
+</script>
+
+</html>

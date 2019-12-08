@@ -1,0 +1,2732 @@
+.L_header, .L_footer, .L_main, .L_img {
+	width: 100%;
+}
+
+.L_header {
+	height: 80px;
+	background-color: #308ce3;
+}
+
+.L_wrap, .outWrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.logo {
+	padding-left: 95px;
+	line-height: 80px;
+}
+.logo img {
+	vertical-align: middle;
+}
+
+
+.pass-input-container {
+	position: relative
+}
+.pass-input {
+	border: 1px solid #CCC;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: #fff;
+	vertical-align: middle;
+	font-size: 12px;
+	padding: 7px 0 7px 8px;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	color: #333;
+	font-size: 14px;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .3s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .3s;
+	-o-transition-property: all;
+	-o-transition-duration: .3s;
+	transition-property: all;
+	transition-duration: .3s;
+	outline: 0;
+	resize: none;
+	width: 253px;
+	float: left
+}
+
+.pass-input-forgot {
+	display: block;
+	position: relative;
+	float: left;
+	height: 16px;
+	width: 328px;
+	padding: 11px 10px;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #666;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	background: #fff
+}
+
+textarea.pass-input {
+	line-height: 18px;
+	color: #666;
+	height: 168px;
+	padding: 7px 0 7px 8px;
+	overflow: auto;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .3s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .3s;
+	-o-transition-property: all;
+	-o-transition-duration: .3s;
+	transition-property: all;
+	transition-duration: .3s
+}
+
+.pass-input-hover {
+	border-color: #ababab #ccc #ccc #ababab
+}
+
+.pass-input-warning {
+	border: 1px solid #da1111
+}
+
+.pass-input-error {
+	border: 1px solid #da1111
+}
+
+.pass-input-focus {
+	border-color: #377bcb
+}
+
+.pass-input-label {
+	position: absolute;
+	left: 13px;
+	top: 3px;
+	color: #ccc;
+	height: 28px;
+	line-height: 28px;
+	cursor: text;
+	-webkit-transition-property: color;
+	-webkit-transition-duration: .3s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .3s;
+	-o-transition-property: all;
+	-o-transition-duration: .3s;
+	transition-property: all;
+	transition-duration: .3s
+}
+
+.pass-input-label-hover {
+	color: #ababab
+}
+
+.pass-input-label-focus {
+	color: #ccc
+}
+
+.pass-input-title {
+	font-size: 14px;
+	width: 70px;
+	padding-right: 10px;
+	line-height: 32px;
+	float: left;
+	text-align: right
+}
+
+.pass-input-msg {
+	line-height: 32px;
+	float: left;
+	color: #da1111;
+	margin-left: 10px;
+	font-size: 12px
+}
+
+.mod-btn1,.pass-button-submit,.pass-button-timer2 {
+	height: 34px;
+	width: 109px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	border: 0;
+	line-height: 32px
+}
+
+.mod-btn2,.pass-button-timer {
+	height: 29px;
+	width: 107px;
+	color: #333;
+	cursor: pointer;
+	border: 0;
+	line-height: 29px;
+	text-align: center;
+	float: left
+}
+
+.pass-button-timer-timing {
+	color: #a7a7a7;
+}
+
+
+.mod-sub-nav {
+	height: 34px;
+	background: url(../../../images/login/findpassword/mod_sub_nav.png) no-repeat 0 0;
+	margin: 30px 0;
+	line-height: 34px;
+	color: #666;
+	font-size: 16px;
+	font-family: "Microsoft Yahei",\5fae\8f6f\96c5\9ed1,\9ed1\4f53
+}
+
+.mod-sub-nav li {
+	float: left;
+	padding-left: 66px
+}
+
+.mod-sub-list1 {
+	width: 175px
+}
+
+.mod-sub-list2 {
+	width: 163px
+}
+
+.mod-sub-nav li.list1-active {
+	background: url(../../../images/login/findpassword/sub_nav_1.png) no-repeat 0 0;
+	color: #2e82ff
+}
+
+.mod-sub-nav li.list2-active {
+	background: url(../../../images/login/findpassword/sub_nav_2.png) no-repeat 0 0;
+	color: #2e82ff;
+	margin-left: -12px;
+	padding-left: 78px
+}
+
+.mod-sub-nav li.list3-active {
+	background: url(../../../images/login/findpassword/sub_nav_3.png) no-repeat 0 0;
+	color: #2e82ff;
+	margin-left: -12px;
+	padding-left: 78px;
+	width: 163px
+}
+
+.orange {
+	font-size: 16px;
+	color: #f90;
+	font-weight: 700;
+	font-family: "å®‹ä½“",Arial,Helvetica,STHeiti
+}
+
+div.realusertag-wrapper {
+	display: none;
+	opacity: 0;
+	visibility: hidden
+}
+
+.mod-forgot {
+	height: 450px;
+	margin-left: 70px;
+	width: 910px
+}
+
+.w260 {
+	width: 260px
+}
+
+.w100 {
+	width: 100px
+}
+
+.m_t15 {
+	margin-top: 15px
+}
+
+.m_b15 {
+	margin-bottom: 15px
+}
+
+.vcode-distance {
+	margin: 1px 0 0 5px;
+	float: left
+}
+
+.m_l80 {
+	margin-left: 80px
+}
+
+.m_l105 {
+	margin-left: 105px
+}
+
+#appeal-bind-list {
+	padding-left: 105px
+}
+
+.forgot-bind-title {
+	width: 80px;
+	float: left;
+	font-size: 14px
+}
+
+.forgot-bind-info {
+	color: #ababab;
+	float: left;
+	margin-right: 15px
+}
+
+.forgot-bind-a {
+	float: left;
+	color: #00c;
+	/*background: url(/static/passpc-security/img/forgot/arr_down.png) no-repeat right 4px;*/
+	padding-right: 16px
+}
+
+.forgot-bind-a-active {
+	/*background: url(/static/passpc-security/img/forgot/arr_up.png) no-repeat right 4px*/
+}
+
+.pass-input-container {
+	margin-bottom: 20px
+}
+
+.mod-step-detail .pass-error-msg {
+	color: #da1111;
+	font-size: 12px
+}
+
+.mod-appeal-bind div {
+	display: none
+}
+
+.forgot-bind-type {
+	line-height: 16px;
+	margin-bottom: 15px;
+	position: relative;
+	left: -105px
+}
+
+.forgot-bind-type .pass-radio {
+	background-position: 0 0
+}
+
+.button-send-conent table {
+	float: left
+}
+
+.button-send-info {
+	float: left;
+	margin-left: 10px;
+	display: inline;
+	line-height: 32px
+}
+
+.pass-account-slect .pass-radio-list {
+	clear: both;
+	margin-top: 10px;
+	line-height: 16px;
+	background-position: 0 0
+}
+
+.mod-setinfo {
+}
+
+div.mod-bread-nav {
+	background: 0 0;
+	height: 14px;
+	line-height: 14px;
+	padding-left: 0
+}
+
+div.mod-bread-nav a.nav-bread {
+	font-size: 12px
+}
+
+div.mod-bread-nav em.nav-gt {
+	color: #999
+}
+
+.mod-setinfo-step1 .detail-content {
+	width: 696px
+}
+
+.mod-setinfo .detail-content .phone-bind {
+	margin-top: 40px
+}
+
+.mod-setinfo .binditem {
+	position: relative;
+	margin-bottom: 40px
+}
+
+.mod-setinfo .binditem .bind-content {
+	float: left;
+	padding: 0
+}
+
+.mod-setinfo .binditem .bind-content .bind-title {
+	font-size: 14px
+}
+
+.mod-setinfo .binditem .bind-content .bind-title-detail-msg {
+	font-size: 18px;
+	color: #f90;
+	font-weight: 700;
+    /*
+	font-family: "å®‹ä½“",Arial,Helvetica,STHeiti
+    */
+}
+
+.mod-setinfo .binditem .bind-content .bind-title .bind-link {
+	margin-left: 10px;
+	font-size: 12px
+}
+
+.mod-setinfo .binditem .bind-content .bind-title .bind-link.useless {
+	color: #999
+}
+
+.mod-setinfo .binditem .bind-content .bind-title .bind-link.useless:hover {
+	color: #999
+}
+
+.mod-setinfo .binditem .bind-content .bind-tips {
+	font-size: 12px;
+	padding-top: 16px;
+	color: #666
+}
+
+.mod-setinfo .binditem .bind-content .bind-tips-detial {
+	padding-top: 8px
+}
+
+.mod-setinfo .detail-title {
+	font-size: 14px;
+	color: #666
+}
+
+.mod-setinfo .binditem .bind-icon {
+	margin-right: 30px;
+	float: left;
+	width: 73px;
+	height: 73px
+}
+
+.mod-setinfo .binditem .re {
+	position: absolute;
+	display: block;
+	height: 28px;
+	width: 28px;
+	top: 0;
+	left: 54px;
+    /*
+	background: url(/static/passpc-security/img/secure/bitch.png) no-repeat 0 0
+    */
+}
+
+.mod-setinfo .bind-btn {
+	float: right;
+	padding-top: 30px;
+	_padding-top: 15px
+}
+
+.mod-setinfo .button,.mod-layer-body .button,.mod-step-detail .button {
+	display: block;
+	float: left;
+	text-align: center;
+	color: #fff;
+	font-weight: 400;
+	line-height: 30px;
+	width: 77px;
+	height: 30px;
+	background: #3e89ec;
+	border-radius: 3px
+}
+
+.mod-setinfo .button:hover,.mod-layer-body .button:hover,.mod-step-detail .button:hover {
+	background-color: #438ff7;
+	color: #fff
+}
+
+.mod-setinfo .button:focus,.mod-layer-body .button:focus,.mod-step-detail .button:focus {
+	background-color: #3a84e8;
+	color: #fff
+}
+
+.mod-setinfo .binditem .bind-content .bind-tips {
+	font-size: 12px;
+	padding-top: 16px;
+	color: #666
+}
+
+.mod-setinfo .binditem .bind-content .bind-tips-detial {
+	padding-top: 8px
+}
+
+.mod-setinfo .detail-title {
+	font-size: 14px;
+	color: #666
+}
+
+.mod-setinfo .binditem .bind-icon {
+	margin-right: 30px;
+	float: left;
+	width: 73px;
+	height: 73px
+}
+
+.mod-setinfo .email-bind .binded {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-repeat: no-repeat;*/
+	background-position: -96px -103px
+}
+
+.mod-setinfo .email-bind .unbind {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-repeat: no-repeat;*/
+	background-position: -5px -103px
+}
+
+.mod-setinfo .email-bind .binded-hover {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -95px -103px
+}
+
+.mod-setinfo .app-bind .binded {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -96px -300px
+}
+
+.mod-setinfo .app-bind .unbind {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -5px -300px
+}
+
+.mod-setinfo .app-bind .binded-hover {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -5px -202px
+}
+
+.mod-setinfo .phone-bind .binded {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -96px -5px
+}
+
+.mod-setinfo .phone-bind .unbind {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -5px -5px
+}
+
+.mod-setinfo .phone-bind .binded-hover {
+/*	background-image: url(/static/passpc-security/img/secure/sprite_sec_question.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/sprite_sec_question.png) 1x,url(/static/passpc-security/img/secure/sprite_sec_question@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: -5px -5px
+}
+
+.mod-setinfo .binditem .re {
+	position: absolute;
+	display: block;
+	height: 28px;
+	width: 28px;
+	top: 0;
+	left: 54px;
+/*	background-image: url(/static/passpc-security/img/secure/bitch.png);
+	background-image: -webkit-image-set(url(/static/passpc-security/img/secure/bitch.png) 1x,url(/static/passpc-security/img/secure/bitch@2x.png) 2x);
+	background-image: -moz-image-set(url(/static/passpc-security/img/secure/bitch.png) 1x,url(/static/passpc-security/img/secure/bitch@2x.png) 2x);
+	background-image: -o-image-set(url(/static/passpc-security/img/secure/bitch.png) 1x,url(/static/passpc-security/img/secure/bitch@2x.png) 2x);
+	background-image: -ms-image-set(url(/static/passpc-security/img/secure/bitch.png) 1x,url(/static/passpc-security/img/secure/bitch@2x.png) 2x);*/
+	background-repeat: no-repeat;
+	background-position: 0 0
+}
+
+.mod-setinfo .bind-btn {
+	float: right;
+	padding-top: 30px;
+	_padding-top: 15px
+}
+
+.mod-setinfo .button,.mod-layer-body .button,.mod-step-detail .button {
+	display: block;
+	float: left;
+	text-align: center;
+	color: #fff;
+	font-weight: 400;
+	line-height: 30px;
+	width: 77px;
+	height: 30px;
+	background: #3f89ec;
+	border-radius: 3px
+}
+
+.mod-setinfo .button:hover,.mod-layer-body .button:hover,.mod-step-detail .button:hover {
+	background-color: #438ff7;
+	color: #fff
+}
+
+.mod-setinfo .button:focus,.mod-layer-body .button:focus,.mod-step-detail .button:focus {
+	background-color: #3a84e8;
+	color: #fff
+}
+
+.mod-setinfo .grey-button,.mod-layer-body .grey-button {
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: 400;
+	line-height: 30px;
+	background: #3f89ec;
+	border-radius: 3px;
+	height: 28px;
+	width: 75px;
+	border: 1px solid #dfdfdf;
+	background: #efefef;
+	color: #666
+}
+
+.mod-setinfo .grey-button:hover,.mod-layer-body .grey-button:hover {
+	background: #e0e0e0;
+	border-color: #ccc;
+	color: #666
+}
+
+.mod-setinfo .grey-button:focus,.mod-layer-body .grey-button:focus {
+	background: #e0e0e0;
+	border-color: #ccc;
+	color: #666
+}
+
+.mod-setinfo .bind-button-change {
+}
+
+.mod-setinfo .bind-button-bind {
+}
+
+.mod-setinfo .bind-button-unbind {
+	margin-left: 10px
+}
+
+.mod-setinfo .detail-next-button,.mod-setinfo-step2 .pass-button-submit {
+	width: 112px;
+	height: 32px;
+	font-weight: 700
+}
+
+.mod-layer-body {
+	width: 390px;
+	height: 313px;
+	border: 3px solid rgba(0,0,0,.3)
+}
+
+.mod-layer-body .mod-layer-main {
+	padding: 20px 20px 0
+}
+
+.mod-layer-body .unbind-dia-warn {
+    /*
+	background: url(/static/passpc-security/img/forgot/warning.png) 13px 17px no-repeat #fffbf6;
+    */
+	border: 1px solid #f8e8d3;
+	padding: 15px 15px 15px 35px;
+	color: #666;
+	line-height: 20px
+}
+
+.mod-layer-body .orange {
+	font-size: 14px
+}
+
+.mod-layer-body .unbind-dia-title {
+	font-size: 12px;
+	color: #666;
+	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 10px
+}
+
+.mod-layer-body .unbind-dia-ul li {
+	color: #999;
+	padding-left: 20px;
+	line-height: 20px
+}
+
+.mod-layer-body .unbind-dia-footer {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px dashed #dfdfdf
+}
+
+.mod-layer-body .unbind-dia-footer-app {
+	margin-top: 20px;
+	padding-top: 20px;
+	margin-left: 25%;
+	border-top: 1px dashed #dfdfdf
+}
+
+.unlock {
+	display: none;
+	background-color: #7B7B7B;
+	height: 50px;
+	width: 150px;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 20px;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -75px
+}
+
+.unlock-text {
+	margin-left: 33px
+}
+
+.mod-layer-body .unbind-dia-footer-label {
+	display: block;
+	float: left;
+	color: #666;
+	line-height: 30px;
+	margin-left: 25px
+}
+
+.mod-layer-body .unbind-dia-footer-btn {
+	margin-left: 10px
+}
+
+.mod-setinfo .pass-form {
+}
+
+.mod-setinfo .pass-form-item {
+	position: relative;
+	margin-bottom: 20px
+}
+
+.mod-setinfo .pass-form-item-hidden {
+	display: none
+}
+
+.mod-setinfo .pass-form-item-submit {
+	padding-left: 75px
+}
+
+.mod-setinfo .pass-label {
+	display: block;
+	float: left;
+	height: 42px;
+	width: 65px;
+	margin-right: 10px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #666;
+	font-weight: 700;
+	text-align: right
+}
+
+.mod-setinfo .pass-text-input {
+	display: block;
+	position: relative;
+	float: left;
+	height: 14px;
+	width: 328px;
+	padding: 12px 10px;
+	_padding: 12px 10px;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #666;
+	transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+	-webkit-transition: .3s
+}
+
+.mod-setinfo .pass-text-input:focus {
+	border-color: #488ee7
+}
+
+.mod-setinfo .pass-text-input-error,.mod-setinfo input.weak,.mod-setinfo input.nopwd {
+	border-color: #fc4343
+}
+
+.mod-setinfo .pass-item-error-confirmpwd {
+	display: none;
+	float: left;
+	position: relative;
+	width: 250px;
+	top: 12px;
+	color: #fc4343;
+	height: 16px;
+	line-height: 14px;
+	padding-left: 20px;
+    /*
+	background: url(/static/passpc-account/img/reg/err_small.png) 0 0 no-repeat
+    */
+}
+
+.mod-setinfo .pass-form-setinfo {
+	margin-top: 20px
+}
+
+.mod-setinfo .result-title {
+	width: 696px;
+	padding-top: 40px;
+	padding-bottom: 60px
+}
+
+.mod-setinfo .result-title-h3 {
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	font-weight: 700
+}
+
+.mod-setinfo .result-title-h3 span {
+	color: #333;
+	position: relative;
+	top: -8px;
+	left: 8px
+}
+
+.mod-setinfo .result-title-btn,.mod-step-detail .result-title-btn {
+	float: none;
+	height: 40px;
+	width: 140px;
+	line-height: 40px;
+	font-weight: 700;
+	font-size: 14px;
+	margin: 0 auto;
+	margin-top: 20px
+}
+
+.mod-setinfo .result-resetlog {
+	margin-top: 60px
+}
+
+.mod-setinfo .login-histroy-info {
+	color: #666;
+	font-weight: 400
+}
+
+.mod-setinfo .result-list-content {
+	width: 696px;
+	_width: 698px
+}
+
+.mod-setinfo .result-content-title span {
+	font-weight: 700;
+	color: #333
+}
+
+.auth-account-nav {
+	position: absolute;
+	left: -1px;
+	top: 39px;
+	font-size: 12px;
+	width: 359px;
+	border: 1px solid #ccc;
+	border-top: 0;
+	display: none;
+	z-index: 1000;
+	_top: 41px
+}
+
+.auth-account-nav li {
+	line-height: 30px;
+	border-bottom: 1px solid #eee;
+	background-color: #fff
+}
+
+.auth-account-nav li a {
+	color: #666;
+	display: block;
+	padding-left: 10px;
+	background-color: #fff;
+	width: 349px
+}
+
+.auth-account-nav li a:hover {
+	background-color: #2e82ff;
+	color: #fff
+}
+
+.down-img {
+	width: 35px;
+	height: 40px;
+	background: url(/static/resources/images/login/findpassword/down-question1.png) #2e82ff no-repeat 10px 15px;
+	display: inline-block;
+	position: absolute;
+	left: 325px;
+	top: -1px;
+	_height: 42px
+}
+
+.selected {
+	width: 325px;
+	line-height: 40px;
+	padding-left: 10px;
+	cursor: default
+}
+
+.select-question {
+	width: 325px;
+	_width: 340px;
+	border: #ccc 1px solid;
+	border-right: 0;
+	height: 38px;
+	position: relative
+}
+
+.verify-method {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 30px
+}
+
+.m-t10 {
+	margin-top: 10px
+}
+
+.app-type {
+	font-size: 12px;
+	width: 120px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer
+}
+
+.app-type:hover {
+	opacity: .7
+}
+
+.forgot-app-select {
+	border-bottom: 1px solid #e1e5eb
+}
+
+.app-type-selected {
+	border-bottom: 2px solid #2e82ff;
+	position: relative;
+	bottom: -1px
+}
+
+.app-type-selected:before {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	line-height: 0;
+	font-size: 0;
+	border-bottom: 5px solid #2e82ff;
+	border-top: 0 none;
+	border-left: 5px dashed transparent;
+	border-right: 5px dashed transparent;
+	content: "";
+	left: 55px;
+	position: absolute;
+	top: 25px
+}
+
+.forgot-auth-container {
+	width: 520px
+}
+
+.forgot-auth-title {
+	font-weight: 700;
+	font-size: 14px;
+	margin-bottom: 20px
+}
+
+.form-2-label {
+	width: 70px;
+	font-size: 14px;
+	float: left;
+	margin-right: 10px;
+	text-align: right;
+	line-height: 32px
+}
+
+.form-2-content {
+	font-size: 14px;
+	position: relative;
+	float: left
+}
+
+.form-app-select {
+	_width: 365px
+}
+
+.line-32 {
+	line-height: 32px
+}
+
+.form-2-content .pass-button-timer {
+	margin: 0 0 0 10px
+}
+
+.p-l80 {
+	padding-left: 80px
+}
+
+.p-l20 {
+	padding-left: 20px
+}
+
+.form-2-content .pass-input-msg {
+	clear: both;
+	margin-left: 0;
+	height: 32px;
+	width: 420px
+}
+
+.form-2-content .input-msg-new {
+	clear: none;
+	width: auto;
+	margin-left: 5px;
+	line-height: 40px
+}
+
+.pass-input-stip {
+	line-height: 40px;
+	float: left;
+	font-size: 12px;
+	margin-left: 10px;
+	display: inline-block
+}
+
+.clear {
+	clear: both;
+	height: 0
+}
+
+.upsms-auth-content {
+	width: 400px;
+	height: 130px;
+	border: 1px solid #ccc;
+	margin-bottom: 15px
+}
+
+.upsms-auth-left {
+	background: #f9f9f9;
+	width: 209px;
+	height: 100px;
+	float: left;
+	padding: 20px 20px 10px;
+	border-right: 1px solid #ccc
+}
+
+.upsms-auth-left p {
+	margin-bottom: 10px
+}
+
+.upsms-auth-tip {
+	color: #999;
+	margin-top: 45px
+}
+
+.upsms-auth-right {
+	width: 150px;
+	padding-top: 10px;
+	float: right;
+	text-align: center
+}
+
+.upsms-mt10 {
+	margin-top: 10px
+}
+
+.app-auth-info {
+	padding-left: 20px;
+	margin-bottom: 10px;
+	width: 320px
+}
+
+.qrcode-auth-info {
+	width: 170px;
+	margin-left: 10px;
+	margin-top: 40px
+}
+
+.pass-img-border {
+	border: 1px solid #ccc;
+	padding: 3px
+}
+
+.app-quick-msg {
+	line-height: 32px;
+	color: #da1111;
+	font-size: 12px
+}
+
+.auth-account-nav .hide {
+	display: none
+}
+
+.app-qrocde-msg {
+	height: 30px;
+	margin-top: 10px;
+	color: #da1111
+}
+
+.app-onekey-msg {
+	height: 80px;
+	margin-top: 10px;
+	color: #da1111
+}
+
+.userName-clearbtn {
+    /*
+	background: url(/static/passpc-security/img/forgot/close.png) no-repeat;
+    */
+	background-position: 0 0;
+	cursor: pointer;
+	position: absolute;
+	z-index: 8;
+	top: 15px;
+	margin-left: -35px;
+	*margin-left: -43px;
+	height: 12px;
+	width: 12px;
+	display: none;
+	transition: all ease-out .3s
+}
+
+.userName-clearbtn-hover {
+	background-position: 0 -15px
+}
+
+.form-question-item {
+	font-size: 14px;
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 20px;
+	_height: 55px
+}
+
+.form-question-item .pass-input {
+	margin-top: 6px
+}
+
+.form-question-item .pass-input-label {
+	top: 8px;
+    /*
+	_left: -266px;
+    */
+}
+
+.form-question-item .pass-question-msg {
+	margin-top: 10px
+}
+
+.p-t-onekey {
+	padding-top: 53px
+}
+
+.m-b-token {
+	margin-bottom: 53px
+}
+
+#pass-button-new1 {
+	width: 120px;
+	height: 36px;
+	border: 1px solid #ccc;
+	background: #f7f7f7;
+	color: #666;
+	line-height: 36px
+}
+
+.forgot-answer {
+	line-height: 40px;
+	margin-top: 6px
+}
+
+.m-b30 {
+	margin-bottom: 30px
+}
+
+.l-h40 {
+	line-height: 40px
+}
+
+.mod-step-detail .pass-button-submit {
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	color: #fff;
+	background-image: none;
+	border-radius: 3px;
+	border: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+	-webkit-transition: .3s;
+	background-color: #3f89ec;
+	width: 350px
+}
+
+.m-b-token .pass-button-new {
+	width: 320px;
+	height: 40px;
+	background: #2e82ff;
+	color: #fff;
+	font-weight: 700
+}
+
+#pass-button-new {
+	width: 120px;
+	height: 36px;
+	border: 1px solid #ccc;
+	background: #f7f7f7;
+	color: #666;
+	line-height: 36px
+}
+
+.mod-step-detail .pass-button-submit:hover {
+	background-color: #4490f7
+}
+
+.mod-step-detail .pass-button-submit-disabled {
+	color: #9ebef4;
+	background: #fff
+}
+
+.m-b30 .pass-button-new1 {
+	width: 360px;
+	height: 40px;
+	background: #2e82ff;
+	color: #fff;
+	font-weight: 700
+}
+
+.forgot-auth-type {
+	position: relative;
+	z-index: 1
+}
+
+.z-i10 {
+	z-index: 10
+}
+
+.img-info {
+	padding-right: 5px
+}
+
+.inform-appeal {
+	padding-top: 35px;
+	line-height: 22px
+}
+
+.inform-appeal li {
+	list-style-type: disc;
+	margin-left: 15px
+}
+
+.mod-forgot-dialog-body {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1000;
+	border: 2px solid #ccc;
+	background-color: #fff;
+	display: none
+}
+
+.forgot-dialog-title {
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #eee
+}
+
+.forgot-dialog-title span {
+	width: auto;
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+	padding-left: 20px;
+	display: block
+}
+
+.forgot-dialog-title a {
+	width: 14px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 16px;
+	outline: 0;
+	display: block;
+    /*
+	background: url(/static/passpc-base/img/ui/close.png) no-repeat 0 0;
+    */
+	background-position: 0 0
+}
+
+.forgot-dialog-title a:hover {
+	background-position: 0 -40px
+}
+
+.forgot-dialog-inform {
+	color: #999;
+	margin-bottom: 15px
+}
+
+.forgot-dialog-content {
+	padding: 25px 20px 40px
+}
+
+.pass-input-msg-dialog {
+	line-height: 20px;
+	margin-left: 0
+}
+
+.pass-input-code-container {
+	position: relative;
+	margin-bottom: 5px
+}
+
+.mod-forgot-dialog-body .pass-input-msg {
+	display: block;
+	height: 20px;
+	width: 300px;
+	line-height: 20px;
+	margin-left: 0
+}
+
+.mod-forgot-dialog-body .pass-button-submit {
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	color: #fff;
+	background-image: none;
+	border-radius: 3px;
+	border: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+	-webkit-transition: .3s;
+	background-color: #3f89ec;
+	width: 350px
+}
+
+.label-input-code {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	z-index: 1;
+	font-size: 14px;
+	color: #aaa;
+	border-right: 1px solid #ccc;
+	height: 30px;
+	width: 67px;
+	line-height: 30px;
+    /*
+	background: url(/static/passpc-security/img/forgot/down1.png) 45px 11px no-repeat;
+    */
+	display: block
+}
+
+.pass-input-code {
+	padding-left: 85px;
+	width: 268px
+}
+
+.input-tip-code {
+	top: 6px;
+	left: 85px;
+	font-size: 14px
+}
+
+#codelist-code-ul {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	line-height: 30px;
+	background-color: #fff;
+	z-index: 10;
+	width: 364px;
+	height: 150px;
+	overflow-y: scroll;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	color: #666;
+	display: none;
+	_top: 42px
+}
+
+.forgot-code {
+	width: 75px;
+	padding-left: 10px
+}
+
+.font-code {
+	width: 260px
+}
+
+#codelist-code-ul li:hover {
+	background-color: #efefef;
+	cursor: pointer
+}
+
+.mod-layer-forgot {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: #000;
+	opacity: .15;
+	display: none;
+	filter: Alpha(opacity=15);
+	_opacity: 0
+}
+
+.unbind-authsite-tip {
+	width: 200px;
+	margin-left: -100px;
+	text-align: center;
+	padding: 20px 10px;
+	height: auto
+}
+
+.unbind-authsite-tip .unlock-text {
+	margin-left: 0
+}
+/*
+.unbind-15 {
+	background: url(/static/passpc-security/img/forgot/authsite/qq.png) no-repeat
+}
+
+.unbind-16 {
+	background: url(/static/passpc-security/img/forgot/authsite/feixin.png) no-repeat
+}
+
+.unbind-1 {
+	background: url(/static/passpc-security/img/forgot/authsite/renren.png) no-repeat
+}
+
+.unbind-4 {
+	background: url(/static/passpc-security/img/forgot/authsite/tqq.png) no-repeat
+}
+
+.unbind-2 {
+	background: url(/static/passpc-security/img/forgot/authsite/weibo.png) no-repeat
+}
+
+.unbind-42 {
+	background: url(/static/passpc-security/img/forgot/authsite/weixin.png) no-repeat
+}*/
+
+.z-index1 {
+	z-index: 1
+}
+
+.z-index2 {
+	z-index: 2
+}
+
+.mod-secure .mod-step-nav {
+	margin-top: 32px;
+	margin-bottom: 20px
+}
+
+.mod-secure .mod-step-detail {
+}
+
+.mod-step-nav .step-info {
+	width: 635px;
+	height: 30px
+}
+/*
+.mod-step-nav .step-auth-email {
+	background: url(/static/passpc-security/img/secure/step_auth_email.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-auth-phone {
+	background: url(/static/passpc-security/img/secure/step_auth_phone.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-bind-email {
+	background: url(/static/passpc-security/img/secure/step_bind_email.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-bind-phone {
+	background: url(/static/passpc-security/img/secure/step_bind_phone.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-success-email-bind {
+	background: url(/static/passpc-security/img/secure/step_success_email_bind.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-success-email-modify {
+	background: url(/static/passpc-security/img/secure/step_success_email_modify.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-success-phone-bind {
+	background: url(/static/passpc-security/img/secure/step_success_phone_bind.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-success-phone-modify {
+	background: url(/static/passpc-security/img/secure/step_success_phone_modify.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-unbind-phone-confirm {
+	background: url(/static/passpc-security/img/secure/step_unbind_phone_confirm.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-unbind-phone-auth {
+	background: url(/static/passpc-security/img/secure/step_unbind_phone_auth.png) no-repeat 0 0
+}
+
+.mod-step-nav .step-unbind-phone-success {
+	background: url(/static/passpc-security/img/secure/step_unbind_phone_success.png) no-repeat 0 0
+}*/
+
+.mod-step-detail .step-form-tip {
+	color: #999;
+	font-size: 12px;
+	padding-bottom: 20px
+}
+
+.mod-step-detail .authcode-container {
+	width: 250px;
+	margin-bottom: 15px
+}
+
+.mod-step-detail .vcode-container {
+	margin-bottom: 30px
+}
+
+.mod-step-detail .m-b0 {
+	margin-bottom: 0
+}
+
+.mod-step-detail .vcode-container .vcode-input {
+	float: left;
+	width: 97px
+}
+
+.mod-step-detail .vcode-container .vcode-label {
+	width: 90px
+}
+
+.mod-step-detail .vcode-container .vcode-img {
+	float: left;
+	width: 110px;
+	height: 30px;
+	border: 1px solid #ddd;
+	margin-left: 10px
+}
+
+.mod-step-detail .vcode-container .vcode-img-big {
+	float: left;
+	width: 120px;
+	height: 38px;
+	border: 1px solid #ddd;
+	margin-left: 10px
+}
+
+.mod-step-detail .vcode-container .vcode-img-change {
+	padding-left: 10px;
+	display: block;
+	padding-top: 9px;
+	float: left
+}
+
+.mod-step-detail .vcode-container .p-t13 {
+	padding-top: 13px
+}
+
+.mod-step-detail .vcode-container .vcode-input-new {
+	width: 310px;
+	height: 24px;
+	margin-left: 20px;
+	background: #fff
+}
+
+.question-input-new {
+	width: 310px;
+	height: 24px;
+	background: #fff
+}
+
+.input-label-new {
+	top: 6px;
+	left: 30px
+}
+
+.input-label-new1 {
+	top: 6px;
+	left: 10px;
+	font-size: 14px
+}
+
+.form-question-item .input-label-new2 {
+	top: 12px;
+	left: 50px
+}
+
+.mod-step-detail .vcode-container .pass-input-new {
+	width: 220px;
+	height: 22px;
+	background: #fff
+}
+
+.mod-step-detail .vcode-container .vcode-input-width {
+	width: 156px;
+	margin-right: 0
+}
+
+.mod-forgot-dialog-body .vcode-container .vcode-input-width {
+	width: 156px;
+	margin-right: 0
+}
+
+.mod-forgot-dialog-body .vcode-container .vcode-img-big {
+	float: left;
+	width: 100px;
+	height: 38px;
+	border: 1px solid #ddd;
+	margin-left: 10px
+}
+
+.mod-forgot-dialog-body .vcode-container .vcode-img-change {
+	padding-left: 10px;
+	display: block;
+	padding-top: 13px;
+	float: left
+}
+
+.mod-step-detail .resend-button-container {
+	margin-bottom: 20px
+}
+
+.mod-step-detail .step-email-sendinfo {
+	font-size: 14px
+}
+
+.mod-step-detail .step-email-sendinfo a {
+	text-decoration: underline
+}
+
+.mod-step-detail .smscode-container {
+	width: 93px;
+	margin-bottom: 15px
+}
+
+.w93 {
+	width: 93px
+}
+
+.mod-step-detail .step-tip {
+	border-top: 1px dotted #e5e5e5;
+	margin: 70px 0 140px;
+	width: 910px
+}
+
+.mod-step-detail .shallow {
+	color: #999
+}
+
+.mod-step-detail .shallow a {
+	color: #3B7FD0
+}
+
+.mod-step-detail .step-tip .tip-title {
+	margin: 15px 0;
+	font-weight: 700;
+	font-size: 14px
+}
+
+.mod-step-detail .step-tip li {
+	margin-top: 12px
+}
+
+.mod-step-detail .step-tip li a {
+	text-decoration: underline
+}
+
+form {
+	position: relative
+}
+
+.mod-step-detail .step-pop-tip {
+	border: 1px solid #c6def0;
+	background-color: #f9fcff;
+	margin: 25px 2px 10px 10px;
+	padding: 0 10px 14px 14px;
+	position: absolute;
+	width: 230px;
+	left: 428px
+}
+
+.mod-step-detail .tip-light-icon {
+/*	background: url(/static/passpc-security/img/secure/tip.png) no-repeat 0 0;
+	_background: url(/static/passpc-security/img/secure/tip-8.png) no-repeat 0 0;*/
+	display: inline-block;
+	height: 19px;
+	width: 18px
+}
+
+.mod-step-detail .step-pop-tip .tip-title {
+	margin: 15px 0 2px;
+	font-weight: 700;
+	font-size: 13pt
+}
+
+.mod-step-detail .step-pop-tip li {
+	margin-top: 5px;
+	line-height: 200%
+}
+
+.mod-step-detail .step-pop-tip li {
+	color: #666
+}
+
+.mod-step-detail .step-pop-tip li a {
+	text-decoration: underline;
+	color: #261cdc
+}
+
+.mod-step-detail .step-account-select {
+	float: left;
+	text-align: center;
+	width: 73px
+}
+
+.mod-step-detail .step-account-select .select-account-icon {
+	height: 73px;
+	width: 73px;
+    /*
+	background: url(/static/passpc-base/img/sprite_email_phone_icon.png) no-repeat 0 -80px
+    */
+}
+
+.mod-step-detail a:hover .step-account-select .select-account-icon {
+	background-position: 0 -240px
+}
+
+.mod-step-detail a.mod-select-active .step-account-select .select-account-icon {
+	background-position: 0 -160px
+}
+
+.mod-step-detail .step-account-select .select-account-info {
+	font-size: 12px;
+	text-align: center;
+	padding-top: 20px;
+	color: #377ccb
+}
+
+.mod-step-detail .step-email-info,.mod-step-detail .step-form-info {
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.mod-step-detail .step-email-select,.mod-step-detail .step-secure-select {
+	float: left;
+	text-align: center;
+	width: 220px
+}
+
+.mod-step-detail .step-email-select .select-email-icon,.mod-step-detail .step-secure-select .select-secure-icon {
+	height: 73px;
+	width: 73px;
+	margin-left: 70px;
+	*margin-left: 0;
+    /*
+	background: url(/static/passpc-base/img/sprite_email_phone_icon.png) no-repeat -95px -80px
+    */
+}
+
+.mod-step-detail .step-secure-select .select-secure-icon {
+	background-position: -382px -80px
+}
+
+.mod-step-detail a:hover .step-email-select .select-email-icon {
+	background-position: -95px -240px
+}
+
+.mod-step-detail a:hover .step-secure-select .select-secure-icon {
+	background-position: -382px -240px
+}
+
+.mod-step-detail a.mod-select-active .step-email-select .select-email-icon {
+	background-position: -95px -160px
+}
+
+.mod-step-detail a.mod-select-active .step-secure-select .select-email-icon {
+	background-position: -382px -160px
+}
+
+.mod-step-detail a.change-choice {
+	display: block;
+	float: left
+}
+
+.mod-step-detail .step-email-select .select-email-info,.mod-step-detail .step-secure-select .select-secure-info {
+	font-size: 12px;
+	text-align: center;
+	padding-top: 20px;
+	color: #377ccb
+}
+
+.mod-step-detail .step-phone-select {
+	float: left;
+	text-align: center;
+	width: 220px
+}
+
+.mod-step-detail .step-phone-select .select-phone-icon {
+	height: 73px;
+	width: 73px;
+	margin-left: 70px;
+	*margin-left: 0;
+    /*
+	background: url(/static/passpc-base/img/sprite_email_phone_icon.png) no-repeat -192px -80px
+    */
+}
+
+.mod-step-detail a:hover .step-phone-select .select-phone-icon {
+	background-position: -192px -240px
+}
+
+.mod-step-detail a.mod-select-active .step-phone-select .select-phone-icon {
+	background-position: -192px -160px
+}
+
+.mod-step-detail .step-phone-select .select-phone-info {
+	font-size: 12px;
+	text-align: center;
+	padding-top: 20px;
+	color: #377ccb
+}
+
+.mod-step-detail .step-choose {
+	position: relative
+}
+
+.mod-step-detail .select-phone-nophone .select-phone-info {
+	color: #999
+}
+
+.mod-step-detail .select-phone-nophone .select-phone-info:hover {
+	color: #999
+}
+
+.mod-step-detail .select-phone-nophone .select-phone-icon {
+	background-position: -192px 0
+}
+
+.mod-step-detail a:hover .select-phone-nophone .select-phone-icon {
+	background-position: -192px 0
+}
+
+.mod-step-detail .select-phone-nophone {
+	position: relative
+}
+
+.mod-step-detail .select-phone-warn {
+	position: absolute;
+	padding: 8px;
+	background-color: #f7f7f7;
+	border: #efefef 1px solid;
+	border-radius: 3px;
+	color: #999;
+	top: 18px;
+	left: 380px
+}
+
+.mod-step-detail .select-phone-arrow {
+	position: absolute;
+	top: 8px;
+	left: -6px
+}
+
+.mod-step-detail .select-phone-arrow em {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #efefef
+}
+
+.mod-step-detail .select-phone-arrow em.arrowb {
+	position: absolute;
+	top: 0;
+	left: 1px;
+	color: #f7f7f7
+}
+
+.mod-step-detail .step-email-error {
+	color: #666
+}
+
+.mod-step-detail .step-tip li {
+	font-family: "å®‹ä½“",Arial,Helvetica,STHeiti
+}
+
+.mod-step-detail a.step-choose-appeallink {
+	font-size: 18px;
+	font-weight: 700;
+	color: #00a1e3;
+    /*
+	background: url(/static/passpc-security/img/forgot/link.png) no-repeat;
+    */
+	display: block;
+	height: 24px;
+	width: 300px;
+	line-height: 24px;
+	padding-left: 32px
+}
+
+.mod-step-detail a.step-choose-appeallink:hover {
+	color: #09d;
+	text-decoration: underline
+}
+
+.mod-step-detail .step-position {
+	width: 73px;
+	margin-left: 80px
+}
+
+.mod-step-detail .step-position .m_l0 {
+	margin-left: 0
+}
+
+.mod-step-detail .email-container {
+	width: 260px;
+	margin-bottom: 15px
+}
+
+.mod-step-detail .email-container .email-label {
+	width: 240px
+}
+
+.mod-step-detail .email-timer {
+	float: left
+}
+
+.mod-step-detail .email-timer-tips {
+	float: left;
+	margin-left: 10px;
+	margin-top: 6px;
+	font-size: 14px
+}
+
+.mod-step-detail .email-timer-tips a {
+	text-decoration: underline
+}
+
+.mod-step-detail .emailcode-container {
+	width: 93px;
+	margin-bottom: 15px
+}
+
+.mod-step-detail .emailcode-container .emailcode-label {
+	width: 80px
+}
+
+.mod-step-detail .phone-container {
+	width: 260px;
+	margin-bottom: 15px
+}
+
+.mod-step-detail .phone-container .phone-label {
+	width: 240px
+}
+
+.mod-step-detail .phonecode-container {
+	width: 93px;
+	margin-bottom: 15px
+}
+
+.mod-step-detail .phonecode-container .phonecode-label {
+	width: 80px
+}
+
+.mod-step-detail .result-info {
+	text-align: center;
+	padding-top: 60px;
+	width: 695px
+}
+
+.mod-step-detail .result-info .result-message {
+	font-size: 18px;
+	font-weight: 700;
+	position: relative;
+	padding-bottom: 40px
+}
+
+.mod-step-detail .result-info .result-message .result-message-link {
+	position: absolute;
+	font-size: 12px;
+	font-weight: 400;
+	left: 205px;
+	top: 38px
+}
+
+.result-message span,.result-message2 span {
+	position: relative;
+	top: -8px;
+	left: 8px
+}
+
+.mod-step-detail .result-info .result-goto {
+	padding-top: 40px
+}
+
+.mod-step-detail .result-info .result-goto a {
+	text-decoration: underline
+}
+
+.mod-step-detail .result-info .result-message2 {
+	font-size: 14px
+}
+
+.mod-step-detail .result-info .result-message2-sub {
+	margin-top: 30px;
+	font-size: 14px;
+	text-align: center
+}
+/*
+.mod-step-detail .success-info {
+	background: url(/static/passpc-base/img/success_icon.png) no-repeat 0 54px
+}
+
+.mod-step-detail .fail-info {
+	background: url(/static/passpc-base/img/error_icon.png) no-repeat 0 54px
+}*/
+
+.mod-step-detail .step-detail-warning {
+	margin-bottom: 20px;
+	margin-left: 80px
+}
+
+.mod-step-detail .step-detail-warning-text {
+	padding-left: 30px;
+	line-height: 28px;
+	height: 30px;
+    /*
+	background: url(/static/passpc-security/img/reset/smile.png) no-repeat 0 0;
+    */
+	font-size: 14px;
+	color: #666
+}
+
+.pass-tips {
+	position: absolute;
+	left: 420px;
+	top: 200px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #f9f9f8
+}
+
+.pass-tips-arr {
+	position: absolute;
+	left: -4px;
+	top: 15px;
+    /*
+	background: url(/static/passpc-base/img/reg_tip_header_t.png) no-repeat 0 0;
+    */
+	width: 6px;
+	height: 10px
+}
+
+.pass-tips-content {
+	margin-left: 5px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 1px #efefef;
+	background: #f9f9f9;
+	width: 200px
+}
+
+.pass-tips-content-item {
+    /*
+	background: url(/static/passpc-security/img/forgot/password_icons.png) no-repeat;
+    */
+	background-position: -6px 0;
+	line-height: 20px;
+	padding-left: 18px;
+	color: #666
+}
+
+.pass-tips-content-item-success {
+	background-position: -3px -16px
+}
+
+.pass-tips-content-item-error {
+	background-position: -5px -30px
+}
+
+.p-b10 {
+	padding-bottom: 10px
+}
+
+.pass-input-pwdmsg {
+	float: left;
+	width: 226px
+}
+
+.pass-streng-wrapper {
+	visibility: hidden
+}
+
+.pass-input-pwdmsg .pass-input-msg {
+	line-height: 1.3em;
+	margin-top: 2px;
+	display: inline-block;
+	*clear: both
+}
+
+.pass-input-pwdmsg-ok {
+	color: #999
+}
+
+.pass-tips-streng {
+	float: left;
+	background: #f1f1f1;
+	width: 165px;
+	height: 10px;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-right: 6px;
+	position: relative
+}
+
+.pass-tips-streng span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 10px
+}
+
+.pass-tips-title-level-0 {
+	color: #7bb55d
+}
+
+.pass-tips-title-level-1 {
+	color: #e9ba54
+}
+
+.pass-tips-title-level-2 {
+	color: #c00
+}
+
+.pass-tips-level-2 {
+	width: 55px;
+	background: #c00
+}
+
+.pass-tips-level-1 {
+	width: 110px;
+	background: #e9ba54
+}
+
+.pass-tips-level-0 {
+	width: 165px;
+	background: #7bb55d
+}
+
+.pass-radio {
+	float: left;
+    /*
+	background: url(/static/passpc-base/img/ui/radio_normal.png) no-repeat 0 8px;
+    */
+	padding-left: 25px;
+	cursor: pointer
+}
+
+.pass-radio-list {
+	position: relative
+}
+
+.pass-radio-list .pass-radio-tag {
+	display: none;
+	position: absolute;
+	top: -10px;
+	left: 450px;
+	width: 265px;
+	border: 1px solid #ddd;
+	padding: 15px;
+	color: #999;
+	box-shadow: 1px 1px 1px #efefef;
+	cursor: default
+}
+
+.pass-radion-active .pass-radio-tag {
+	display: block
+}
+
+.pass-radio-list .pass-radio-tag .arrow {
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: -6px
+}
+
+.pass-radio-list .pass-radio-tag .arrowa {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #ddd
+}
+
+.pass-radio-list .pass-radio-tag .arrowb {
+	position: absolute;
+	top: 0;
+	left: 1px;
+	color: #fff
+}
+
+.pass-radion-active {
+    /*
+	background: url(/static/passpc-base/img/ui/radio_select.png) no-repeat 0 8px
+    */
+}
+
+.pass-button-send table {
+	float: left
+}
+
+.send-info-bottom {
+	font-size: 14px;
+	height: 20px
+}
+
+.send-info-bottom a {
+	text-decoration: underline
+}
+
+.pass-error-color {
+	color: #da1111
+}
+
+.send-info-right {
+	float: left;
+	margin-left: 10px;
+	display: inline;
+	line-height: 30px
+}
+
+.send-info-right a {
+	text-decoration: underline
+}
+
+#content {
+	height: auto
+}
+
+#content .mod-forgot {
+	min-height: 500px;
+	height: auto
+}
+
+.result-content-msg {
+	font-size: 12px;
+	margin: 10px 0;
+	color: #999;
+	text-align: left;
+	display: block
+}
+
+.result-content-link {
+	display: block;
+	text-align: right
+}
+
+.result-content-ul {
+	border-top: 1px solid #ddd;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 10px
+}
+
+.result-content-ul .result-content-list {
+	display: block;
+	border-bottom: 1px solid #dfdfdf
+}
+
+.result-content-ul .result-content-title span {
+    /*
+	text-decoration: bold;
+    */
+	background: #f7f7f7
+}
+
+.result-content-ul .result-content-title span,.result-content-ul .result-content-list span {
+	float: left;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 20px
+}
+
+.result-content-ul .result-content-list span.result-content-ip {
+}
+
+.result-content-ul .result-content-time {
+	width: 80px
+}
+
+.result-content-ul .result-content-opera {
+	width: 230px
+}
+
+.result-content-ul .result-content-local {
+	width: 115px
+}
+
+.result-content-ul .result-content-ip {
+	width: 110px
+}
+
+.pwd-checklist-arrow em.arrowa {
+	color: #ddd;
+	left: -3px
+}
+
+.pwd-checklist-arrow em.arrowb {
+	color: #f9f9f9;
+	left: -2px
+}
+
+.pwd-checklist-arrow em {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 12px
+}
+
+.pwd-checklist-arrow {
+	position: absolute;
+	top: 8px;
+	left: 0
+}
+
+.mod-step-detail .m-b10 {
+	margin-bottom: 10px
+}
+
+.mod-step-detail .m-t0 {
+	margin-top: 0
+}
+
+.mod-step-detail .m-b-mobile {
+	margin-bottom: 8px
+}
+
+#nav {
+	height: 42px
+}
+
+.nav-1 {
+	height: 42px;
+	background-color: #2e82ff;
+	width: 100%;
+	border-bottom: #258bd6;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px #ddd
+}
+
+.nav-2 {
+	height: 46px;
+	background: url(/static/resources/images/login/findpassword/hdbg.png) repeat-x 0 0;
+	width: 100%
+}
+
+.mod-nav {
+	position: relative;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.page-type {
+	color: #333;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+	margin-top: 14px;
+	margin-left: 78px
+}
+
+.page-type-notab {
+	color: #333;
+	font-size: 14px;
+	font-weight: 700;
+	float: left;
+	margin-left: 70px;
+	line-height: 46px;
+	display: inline
+}
+
+.mod-nav .page-type,.mod-nav .nav-list {
+	float: left
+}
+
+.mod-nav .list-item {
+	float: left;
+	margin-right: 10px
+}
+
+.mod-nav .list-item a {
+	padding-left: 20px;
+	padding-right: 20px;
+	float: left
+}
+
+.mod-nav .list-item a span {
+	height: 41px;
+	width: 80px;
+	line-height: 41px;
+	float: left;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	font-family: \5fae\8f6f\96c5\9ed1,\9ed1\4f53
+}
+
+.mod-nav .list-item a:hover {
+	background: #0067ff
+}
+
+.page-title,.page-tab {
+	height: 100%
+}
+
+.page-tab {
+	display: block
+}
+
+.page-tab:link,.page-tab:visited,.page-tab:hover,.page-tab:active {
+	color: #000
+}
+
+.index .list-item-index .page-tab,.ucenter .list-item-ucenter .page-tab,.reset .list-item-reset .page-tab,.secure .list-item-secure .page-tab,.associate .list-item-associate .page-tab {
+	background: #0067ff
+}
+
+.mod-nav .feedback-link {
+	float: right;
+	line-height: 46px;
+	text-decoration: underline
+}
+
+.mod-nav .app-download {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: -36px;
+	width: 115px;
+	height: 80px;
+    /*
+	background: url(/static/passpc-security/img/ucenter/appdownload_bg.png) no-repeat;
+    */
+	z-index: 1
+}
+
+.mod-nav .app-download:hover {
+	background-position: 0 -80px
+}
+
+.mod-bread-nav {
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+.mod-bread-nav a.nav-bread {
+	font-size: 14px
+}
+
+.mod-bread-nav .nav-gt {
+	font-family: STHeiti,"å®‹ä½“";
+	font-size: 14px;
+	margin: 0 5px
+}
+
+.mod-bread-nav a.nav-bread-nolink {
+	color: #666;
+	cursor: default
+}
+
+.mod-bread-nav a.nav-bread-last:hover {
+	color: #666
+}
+
+.mod-secure-question ul.mod-sub-nav {
+	margin-top: 0
+}
+
+.mod-layer {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: #000;
+	opacity: .15;
+	filter: Alpha(opacity=15)
+}
+
+.mod-layer-body {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1000
+}
+
+.mod-layer-body-title {
+	background-color: #FCFCFC;
+	border: 1px solid #CCC;
+	border-width: 1px 1px 0;
+	border-bottom: 0
+}
+
+.mod-layer-body-title span {
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	font-family: "å®‹ä½“";
+	font-weight: 700;
+	color: #333;
+	text-indent: 20px;
+	margin-right: 29px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left
+}
+
+.mod-layer-content {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-top: 1px solid #F2F2F2
+}
+
+.mod-layer-body-title a {
+	width: 14px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 11px;
+	outline: 0;
+	display: block;
+    /*
+	background: url(/static/passpc-base/img/ui/close.png) no-repeat 0 0;
+    */
+	background-position: 0 0
+}
+
+.mod-layer-body-title a:hover {
+	background-position: 0 -40px
+}
+
+.mod-layer-main {
+	padding: 10px;
+	overflow: hidden
+}
+
+.pass-item-tip {
+	display: none;
+	position: absolute
+}
+
+.pass-pop-tip-content {
+	position: relative
+}
+
+.pwd-checklist-wrapper .pwd-checklist-arrow {
+	position: absolute;
+	top: 8px;
+	left: 0
+}
+
+.pwd-checklist-wrapper .pwd-checklist-arrow em {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 20px
+}
+
+.pwd-checklist-wrapper .pwd-checklist-arrow em.arrowa {
+	color: #ddd;
+	left: 0
+}
+
+.pwd-checklist-wrapper .pwd-checklist-arrow em.arrowb {
+	color: #f9f9f9;
+	left: 1px
+}
+
+.pwd-checklist {
+	margin-left: 10px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 1px #efefef;
+	background: #f9f9f9;
+	width: 200px
+}
+
+.pwd-checklist .pwd-checklist-item {
+	line-height: 20px;
+	padding-left: 18px;
+    /*
+	background: url(/static/passpc-account/img/reg/reg_icons.png) no-repeat -86px -112px;
+    */
+	color: #666
+}
+
+.pwd-checklist .pwd-checklist-item-success {
+	background-position: -86px -128px
+}
+
+.pwd-checklist .pwd-checklist-item-error {
+	background-position: -86px -144px;
+	color: #fc4343
+}
+
+.pass-item-error {
+	display: none
+}
+
+.pass-item-error-password {
+	position: absolute;
+	float: left;
+	background: 0 0;
+	padding: 0;
+	top: 0;
+	left: 434px;
+	height: 40px
+}
+
+.pass-item-error-password .pwd-strength-sum {
+	position: relative;
+	display: block;
+	height: 16px;
+	padding-top: 5px
+}
+
+.pass-item-error-password .pwd-strength-sco,.pass-item-error-password .pwd-strength-bg {
+	display: block;
+	position: absolute;
+	width: 130px;
+	height: 10px;
+	line-height: 10px
+}
+
+.pass-item-error-password .middle,.pass-item-error-password .strong {
+	color: #999
+}
+
+.pass-item-error-password .middle .pwd-strength-detail,.pass-item-error-password .strong .pwd-strength-detail {
+	background-position: -80px 0
+}
+
+.pass-item-error-password .weak .pwd-strength-detail,.pass-item-error-password .nopwd .pwd-strength-detail {
+	color: #fc4343
+}
+
+.pass-item-error-password .strong .pwd-strength-sco {
+	background-color: #5bc92e;
+	width: 130px
+}
+
+.pass-item-error-password .strong .pwd-strength-title {
+	color: #5bc92e
+}
+
+.pass-item-error-password .middle .pwd-strength-sco {
+	background-color: #ff9800;
+	width: 70px
+}
+
+.pass-item-error-password .middle .pwd-strength-title {
+	color: #ff9800
+}
+
+.pass-item-error-password .weak .pwd-strength-sco {
+	background-color: #fc4343;
+	width: 30px
+}
+
+.pass-item-error-password .nopwd .pwd-strength-title,.pass-item-error-password .weak .pwd-strength-title {
+	color: #fc4343
+}
+
+.pass-item-error-password .nopwd .pwd-strength-sum {
+	display: none
+}
+
+.pass-item-error-password .nopwd .pwd-strength-detail {
+	margin-top: 12px
+}
+
+.pass-item-error-password .pwd-strength-bg {
+	background-color: #eee
+}
+
+.pass-item-error-password .pwd-strength-title {
+	position: absolute;
+	left: 135px
+}
+
+.pass-item-error-password .pwd-strength-detail {
+    /*
+	background: url(/static/passpc-account/img/reg/reg_icons.png) -80px -24px no-repeat;
+    */
+	padding-left: 20px;
+	line-height: 16px;
+	display: block;
+	width: 250px
+}

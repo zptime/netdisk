@@ -1,0 +1,48 @@
+.outerbefore-top{padding: 30px 140px 0;height: 90px;border-top: solid 1px #eee;border-bottom: solid 1px #eee;background: #fff;position: relative;}
+.outerbefore-title{font-size: 30px;color: #444;line-height: 30px;margin-bottom: 30px;}
+.outerbefore-navbox{height: 30px;width: 100%;}
+.outerbefore-navbox .outerbefore-navitem{margin-right: 30px;float: left;position: relative;}
+.outerbefore-navbox .outerbefore-navitem a{display: block;color: #444444;font-size: 16px;height:100%;width: 100%;text-decoration: none;}
+.outerbefore-navbox .outerbefore-navitem a:hover{color: #4685ff;}
+.outerbefore-navbox .outerbefore-navitem.active a{color: #4685ff;}
+.outerbefore-navbox .outerbefore-navitem.active{border-bottom: solid 2px #4685FF;height: 28px;}
+.outerbefore-top .outerbefore-message{position: absolute;width: 200px;height: 60px;right: 140px;top:60px;}
+.outerbefore-top .outerbefore-message .item1{text-align: right;color: #444444;font-size: 14px;margin-bottom: 10px;}
+.outerbefore-top .outerbefore-message .item2{height: 6px;background: #eeeeee;position: relative;margin-bottom: 5px;border-radius: 3px;width: 200px;}
+.outerbefore-top .outerbefore-message .item2 .item-inner{position: absolute;right: 0;top: 0;height: 6px;width: 20px;background: #54c336;border-radius: 3px;transition: all 1s;}
+.outerbefore-top .outerbefore-message .item3{text-align: right;color: #aaaaaa;font-size: 14px;}
+
+.fl{float: left;}
+.clb:after{content: "";display: block;clear: both;}
+
+/*内容区代码*/
+.content-main{width: 900px;border: solid 1px #eee;border-radius: 4px;margin: 20px auto 0;min-height: 300px;background: #ffffff;padding: 30px 20px 0;}
+
+
+
+
+/*统一浮窗样式*/
+div.layui-layer{overflow: hidden;border-radius: 5px;}
+.layui-layer .layui-layer-title{color: #444444;font-size: 16px;font-weight: bold;background: #ffffff;border-bottom: solid 1px #f0f0f0;}
+.layui-layer-setwin .layui-layer-close1{ background-position: 0px -2px;opacity: 0.7;margin-top: -5px;}
+.layui-layer .layui-layer-setwin .layui-layer-ico{background: url("/static/resources/images/netdisk/delete.png") no-repeat;}
+.layui-layer .layui-layer-setwin a{ width: 24px; height: 24px;}
+.layui-layer .layui-layer-btn a{padding: 0 25px;border-radius: 20px;}
+.layui-layer .layui-layer-btn .layui-layer-btn1{background: #ffffff;box-shadow: 2px 2px 1px rgba(0,0,0,0.1)}
+
+/*文件夹统计页面样式*/
+.operate-top .operate-title{color: #444;font-size: 20px;font-weight: bold;}
+.button-back{width: 80px;height: 30px;border-radius: 4px;border: solid 1px #CCCCCC;text-align: center;line-height: 30px;color: #444444;font-size: 14px;cursor: pointer;background-color: #f5f5f5;position: absolute;right: 0;top: 0;}
+.operate-top{height: 30px;position: relative;}
+
+
+.statistics-msg{margin: 20px 20px;height: 80px;}
+.statistics-msg .item{height: 80px;width: 200px;margin-right: 20px;float: left;border-radius: 4px;box-shadow: 0px 0px 8px rgba(0,0,0,0.2)}
+.statistics-msg .item .item-num{margin-top:20px;color: #444;font-size: 24px;text-align: center;line-height: 24px;}
+.statistics-msg .item .item-txt{color: #888;font-size: 14px;text-align: center;line-height: 36px;}
+
+.nav-items .item{cursor: pointer;}
+.nav-items .item.active{background: #4685FF;color: #ffffff;}
+
+
+

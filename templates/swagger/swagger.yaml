@@ -1,0 +1,1318 @@
+---
+swagger: '3.0'
+info:
+  version: 1.0.0
+  title: 烽火华校V2 网盘系统API
+  description:
+    <br><br>
+
+
+tags:
+  - name: Common
+    description: 通用
+  - name: personaldisk
+    description: 个人网盘
+  - name: schooldisk
+    description: 学校网盘
+  - name: schooldisk_statistics
+    description: 学校网盘_统计
+
+paths:
+
+  /api/test:
+    get:
+      tags:
+        - Common
+      description: 接口测试
+      summary: 接口测试
+      parameters:
+        - name: type
+          in: query
+          description: 测试参数1
+          type: string
+          required: true
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/upload/resumable:
+    get:
+      tags:
+        - Common
+      description: 文件上传-断点续传, <a href="/static/resumable/main.html">点我打开专用测试页面</a>
+      summary: 文件上传
+
+  /user_center/api/login:
+    post:
+      tags:
+        - Common
+      description: 登录 - 非CAS、直连用户中心验证
+      summary: 登录 - 非CAS、直连用户中心验证
+      parameters:
+        - name: username
+          in: formData
+          description: 用户名
+          type: string
+          required: true
+        - name: password
+          in: formData
+          description: 密码
+          type: string
+          format: password
+          required: true
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/common/logout:
+    post:
+      tags:
+        - Common
+      description: 登出
+      summary: 登出
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/mobile/heartbeat:
+    post:
+      tags:
+        - Common
+      description: 移动端心跳消息
+      summary: 移动端心跳消息
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/common/class/list:
+    get:
+      tags:
+        - Common
+      description: 全校班级
+      summary: 全校班级
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/grade'
+
+
+  /api/common/title/list:
+    get:
+      tags:
+        - Common
+      description: 职务列表
+      summary: 职务列表
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/teacher_title'
+
+
+  /api/common/teacher/list:
+    get:
+      tags:
+        - Common
+      description: 教师列表
+      summary: 教师列表
+      parameters:
+        - name: title_id
+          in: query
+          description: 职务ID （不传则查全部）
+          type: string
+          required: false
+        - name: keyword
+          in: query
+          description: 关键字
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/teacher'
+
+
+  /api/common/student/list:
+    get:
+      tags:
+        - Common
+      description: 学生列表
+      summary: 学生列表
+      parameters:
+        - name: grade_id
+          in: query
+          description: 年级ID （不传则查全部）
+          type: string
+          required: false
+        - name: clazz_id
+          in: query
+          description: 班级ID （不传则查全部）
+          type: string
+          required: false
+        - name: keyword
+          in: query
+          description: 关键字
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/student'
+
+
+  /api/common/setting/detail:
+    get:
+      tags:
+        - Common
+      summary: 获取学校的某参数配置
+      description: 获取学校的某参数配置, 目前仅支持SCHOOL_MAX_SIZE-学校网盘最大容量，PERSON_MAX_SIZE-个人网盘最大容量
+      parameters:
+        - name: key
+          in: query
+          description: KEY
+          type: string
+          required: true
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  key:
+                    type: string
+                    description: KEY
+                  value:
+                    type: string
+                    description: VALUE
+
+
+  /api/persondisk/summary:
+    get:
+      tags:
+        - personaldisk
+      description: 查询个人网盘概况
+      summary: 查询个人网盘概况
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  person_total_size:
+                    type: string
+                    description: 总空间
+                  person_used_size:
+                    type: string
+                    description: 已占用空间
+                  person_total_size_b:
+                    type: string
+                    description: 总空间-字节
+                  person_used_size_b:
+                    type: string
+                    description: 已占用空间-字节
+
+
+  /api/persondisk/adddir:
+    post:
+      tags:
+        - personaldisk
+      description: 个人网盘-新建文件夹
+      summary: 个人网盘-新建文件夹
+      parameters:
+        - name: dir_name
+          in: formData
+          description: 新建的目录名称
+          type: string
+          required: true
+        - name: file_id
+          in: formData
+          description: 目录id（在哪个目录下新建目录就填哪个，根目录留空）
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/persondisk/modname:
+    post:
+      tags:
+        - personaldisk
+      description: 个人网盘-修改文件夹/文件名称
+      summary: 个人网盘-修改文件夹/文件名称
+      parameters:
+        - name: file_name
+          in: formData
+          description: 新名称
+          type: string
+          required: true
+        - name: file_id
+          in: formData
+          description: 目录id（在哪个目录下新建目录就填哪个，根目录留空）
+          type: string
+          required: true
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/persondisk/delfile:
+    post:
+      tags:
+        - personaldisk
+      description: 个人网盘-删除文件夹/文件，删除文件夹时自动删除下面所有文件及文件夹
+      summary: 个人网盘-删除文件夹/文件，删除文件夹时自动删除下面所有文件及文件夹
+      parameters:
+        - name: file_id_list
+          in: formData
+          description: json,要删除的id列表 [1,2,3]
+          type: string
+          required: false
+        - name: file_id_del_all
+          in: formData
+          description: 要清空的文件夹id,两个参数都不传时清空用户根目录下所有文件夹
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/persondisk/movfile:
+    post:
+      tags:
+        - personaldisk
+      description: 个人网盘-移动文件夹/文件
+      summary: 个人网盘-移动文件夹/文件
+      parameters:
+        - name: src_file_id_list
+          in: formData
+          description: json,要移动的文件夹/文件的id列表 [1,2,3]
+          type: string
+          required: false
+        - name: desc_file_id
+          in: formData
+          description: 目标文件夹id
+          type: string
+          required: false
+        - name: file_id_move_all
+          in: formData
+          description: 要全部移动的的文件夹id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/persondisk/submitfile:
+    post:
+      tags:
+        - personaldisk
+      description: 个人网盘-提交上传文件
+      summary: 个人网盘-提交上传文件
+      parameters:
+        - name: file_obj_id_list
+          in: formData
+          description: 上传的文件列表json，本id从api/upload/resumable接口拿，如 [1,2,3]
+          type: string
+          required: true
+        - name: file_id
+          in: formData
+          description: 上传的目录id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/persondisk/refreshspace:
+    post:
+      tags:
+        - personaldisk
+      description: 个人网盘-刷新用户空间, 测试用，前端不需要主动调用
+      summary: 个人网盘-刷新用户空间, 测试用，前端不需要主动调用
+      parameters:
+        - name: account_id
+          in: formData
+          description: 用户id，暂不支持，以后需要再开
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/persondisk/filelist:
+    get:
+      tags:
+        - personaldisk
+      description: 个人网盘-查询当前目录下所有文件夹/文件
+      summary: 个人网盘-查询当前目录下所有文件夹/文件
+      parameters:
+        - name: file_id
+          in: query
+          description: 为空则查询根目录
+          type: string
+          required: false
+        - name: qry_child
+          in: query
+          description: 是否包含下级目录, 默认不包含下级，传1则包含下级
+          type: string
+          required: false
+        - name: file_type
+          in: query
+          description: 不传或传空查询全部，传1仅查询文件夹，传2仅查询文件
+          type: string
+          required: false
+        - name: file_name_like
+          in: query
+          description: 根据文件名模糊查询
+          type: string
+          required: false
+        - name: file_name_exact
+          in: query
+          description: 根据文件名精确查询
+          type: string
+          required: false
+        - name: size
+          in: query
+          description: 只控制最上层的list数量。
+          type: string
+          required: false
+        - name: page
+          in: query
+          description: 只控制最上层的list数量。
+          type: string
+          required: false
+        - name: last_id
+          in: query
+          description: 最后一条记录id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: 当前目录id，根目录id为空
+                  filename:
+                    type: string
+                    description: 文件夹/文件名称
+                  sizeb:
+                    type: string
+                    description: 大小-字节
+                  size:
+                    type: string
+                    description: 大小-单位转换为 BMGT的大小
+                  is_dir:
+                    type: string
+                    description: 是否文件夹
+                  update_time:
+                    type: string
+                    description: 更新时间
+                  file_list:
+                    type: array
+                    description: 目录内文件列表
+                  max_page:
+                    type: string
+                    description: 总页数
+                  total:
+                    type: string
+                    description: 总条目数
+
+
+  /api/persondisk/getdownloadurl:
+    get:
+      tags:
+        - personaldisk
+      description: 个人网盘-获取指定文件的下载链接
+      summary: 个人网盘-获取指定文件的下载链接
+      parameters:
+        - name: file_id_list
+          in: query
+          description: json格式,要下载的文件id列表 [1,2,3]
+          type: string
+          required: false
+        - name: file_id_get_all
+          in: query
+          description: 要下载所有文件的文件夹id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  file_list:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          description: 文件id
+                        download_url:
+                          type: string
+                          description: 下载地址，该地址只有指定时间段内有效
+
+
+  /api/schooldisk/summary:
+    get:
+      tags:
+        - schooldisk
+      description: 查询学校网盘概况
+      summary: 查询学校网盘概况
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  person_total_size:
+                    type: string
+                    description: 总空间
+                  person_used_size:
+                    type: string
+                    description: 已占用空间
+                  person_total_size_b:
+                    type: string
+                    description: 总空间-字节
+                  person_used_size_b:
+                    type: string
+                    description: 已占用空间-字节
+
+  /api/schooldisk/getoatarget:
+    get:
+      tags:
+        - schooldisk
+      description: 查询OA组织结构
+      summary: 查询OA组织结构
+      responses:
+        "200":
+          description: 200
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: string
+
+  /api/schooldisk/adddir:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-新建文件夹
+      summary: 学校网盘-新建文件夹
+      parameters:
+        - name: dir_name
+          in: formData
+          description: 新建的目录名称
+          type: string
+          required: true
+        - name: file_id
+          in: formData
+          description: 目录id（在哪个目录下新建目录就填哪个，根目录留空）
+          type: string
+          required: false
+        - name: admin_teacherid_list
+          in: formData
+          description: 管理员的老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+        - name: upload_teacherid_list
+          in: formData
+          description: 具有上传权限老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+        - name: list_teacherid_list
+          in: formData
+          description: 具有查看权限的老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+        - name: download_teacherid_list
+          in: formData
+          description: 具有下载权限的老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/schooldisk/moddir:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-修改文件夹名称及权限
+      summary: 学校网盘-修改文件夹名称及权限
+      parameters:
+        - name: file_name
+          in: formData
+          description: 新名称
+          type: string
+          required: true
+        - name: file_id
+          in: formData
+          description: 目录id（在哪个目录下新建目录就填哪个，根目录留空）
+          type: string
+          required: true
+        - name: admin_teacherid_list
+          in: formData
+          description: 管理员的老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+        - name: upload_teacherid_list
+          in: formData
+          description: 具有上传权限老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+        - name: list_teacherid_list
+          in: formData
+          description: 具有查看权限的老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+        - name: download_teacherid_list
+          in: formData
+          description: 具有下载权限的老师id列表,json数组，如[1,2],如果是全体老师则传入\["all_teacher"\](注意是双引号), 如果仅管理员则传入空数组[]
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/schooldisk/qrydir:
+    get:
+      tags:
+        - schooldisk
+      description: 学校网盘-查询文件夹名称及权限,注意：如果全体老师都有该权限，则将不再返回老师详情信息列表，而是直接返回\["all_teacher"\]
+      summary: 学校网盘-查询文件夹名称及权限
+      parameters:
+        - name: file_id
+          in: query
+          description: 目录id（不支持根目录查询）
+          type: string
+          required: true
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  dir_name:
+                    type: string
+                    description: 目录名称
+                  admin_teacherid_list:
+                    type: array
+                    items:
+                      $ref: '#/definitions/role_teacher_list'
+                  upload_teacherid_list:
+                    type: array
+                    items:
+                      $ref: '#/definitions/role_teacher_list'
+                  list_teacherid_list:
+                    type: array
+                    items:
+                      $ref: '#/definitions/role_teacher_list'
+                  download_teacherid_list:
+                    type: array
+                    items:
+                      $ref: '#/definitions/role_teacher_list'
+
+  /api/schooldisk/delfile:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-删除文件夹/文件，删除文件夹时自动删除下面所有文件及文件夹
+      summary: 学校网盘-删除文件夹/文件，删除文件夹时自动删除下面所有文件及文件夹
+      parameters:
+        - name: file_id_list
+          in: formData
+          description: json,要删除的id列表 [1,2,3]
+          type: string
+          required: false
+        - name: file_id_del_all
+          in: formData
+          description: 要清空的文件夹id,两个参数都不传时清空用户根目录下所有文件夹
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/schooldisk/movfile:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-移动文件夹/文件
+      summary: 学校网盘-移动文件夹/文件
+      parameters:
+        - name: src_file_id_list
+          in: formData
+          description: json,要移动的文件夹/文件的id列表 [1,2,3]
+          type: string
+          required: false
+        - name: desc_file_id
+          in: formData
+          description: 目标文件夹id
+          type: string
+          required: false
+        - name: file_id_move_all
+          in: formData
+          description: 要全部移动的的文件夹id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/schooldisk/submitfile:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-提交上传文件
+      summary: 学校网盘-提交上传文件
+      parameters:
+        - name: file_obj_id_list
+          in: formData
+          description: 上传的文件列表json，本id从api/upload/resumable接口拿，如 [1,2,3]，没有可不传此参数，或传空数组[]
+          type: string
+          required: false
+        - name: person_file_id_list
+          in: formData
+          description: 个人网盘文件列表json，本id从/api/persondisk/filelist接口拿，如 [1,2,3]，没有可不传此参数，或传空数组[]
+          type: string
+          required: false
+        - name: file_id
+          in: formData
+          description: 上传的目录id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/schooldisk/filelist:
+    get:
+      tags:
+        - schooldisk
+      description: 学校网盘-查询当前目录下所有文件夹/文件
+      summary: 学校网盘-查询当前目录下所有文件夹/文件
+      parameters:
+        - name: file_id
+          in: query
+          description: 为空则查询根目录
+          type: string
+          required: false
+        - name: qry_child
+          in: query
+          description: 是否包含下级目录, 默认不包含下级，传1则包含下级
+          type: string
+          required: false
+        - name: file_type
+          in: query
+          description: 不传或传空查询全部，传1仅查询文件夹，传2仅查询文件
+          type: string
+          required: false
+        - name: file_name_like
+          in: query
+          description: 根据文件名模糊查询
+          type: string
+          required: false
+        - name: file_name_exact
+          in: query
+          description: 根据文件名精确查询
+          type: string
+          required: false
+        - name: size
+          in: query
+          description: 只控制最上层的list数量。
+          type: string
+          required: false
+        - name: page
+          in: query
+          description: 只控制最上层的list数量。
+          type: string
+          required: false
+        - name: last_id
+          in: query
+          description: 最后一条记录id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: 当前目录id，根目录id为空
+                  filename:
+                    type: string
+                    description: 文件夹/文件名称
+                  sizeb:
+                    type: string
+                    description: 大小-字节
+                  size:
+                    type: string
+                    description: 大小-单位转换为 BMGT的大小
+                  is_dir:
+                    type: string
+                    description: 是否文件夹
+                  update_time:
+                    type: string
+                    description: 更新时间
+                  file_list:
+                    type: array
+                    description: 目录内文件列表
+                  max_page:
+                    type: string
+                    description: 总页数
+                  total:
+                    type: string
+                    description: 总条目数
+
+  /api/schooldisk/getdownloadurl:
+    get:
+      tags:
+        - schooldisk
+      description: 学校网盘-获取指定文件的下载链接
+      summary: 学校网盘-获取指定文件的下载链接
+      parameters:
+        - name: file_id_list
+          in: query
+          description: json格式,要下载的文件id列表 [1,2,3]
+          type: string
+          required: false
+        - name: file_id_get_all
+          in: query
+          description: 要下载所有文件的文件夹id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  file_list:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          description: 文件id
+                        download_url:
+                          type: string
+                          description: 下载地址，该地址只有指定时间段内有效
+
+  /api/schooldisk/refreshspace:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-刷新学校空间, 测试用，前端不需要主动调用
+      summary: 学校网盘-刷新学校空间, 测试用，前端不需要主动调用
+      parameters:
+        - name: school_id
+          in: formData
+          description: 学校id，暂不支持，以后需要再开
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/schooldisk/getuserdirrole:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-查询用户某个文件夹的权限 <br \>
+        无权限 ROLE_TYPE_NONE = 0 <br \>
+        管理员 ROLE_TYPE_ADMIN = 1 <br \>
+        查看权限 ROLE_TYPE_LIST = 2 <br \>
+        上传权限 ROLE_TYPE_UPLOAD = 3 <br \>
+        下载权限 ROLE_TYPE_DOWNLOAD = 4 <br \>
+        删除权限 ROLE_TYPE_DEL = 5 <br \>
+      summary:
+        学校网盘-查询用户某个文件夹的权限
+      parameters:
+        - name: dir_file_id
+          in: formData
+          description: 目录id（根目录留空）
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+  /api/schooldisk/getuserfilerole:
+    post:
+      tags:
+        - schooldisk
+      description: 学校网盘-查询用户某个文件夹的权限 <br \>
+        无权限 ROLE_TYPE_NONE = 0 <br \>
+        管理员 ROLE_TYPE_ADMIN = 1 <br \>
+        查看权限 ROLE_TYPE_LIST = 2 <br \>
+        上传权限 ROLE_TYPE_UPLOAD = 3 <br \>
+        下载权限 ROLE_TYPE_DOWNLOAD = 4 <br \>
+        删除权限 ROLE_TYPE_DEL = 5 <br \>
+      summary:
+        学校网盘-查询用户某个文件夹的权限
+      parameters:
+        - name: file_id
+          in: formData
+          description: 文件id
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+  /api/schooldisk/dirstatistics:
+    get:
+      tags:
+        - schooldisk_statistics
+      description: 学校网盘-文件夹统计
+      summary: 学校网盘-文件夹统计
+      parameters:
+        - name: dir_file_id
+          in: query
+          description: 目录id，如果统计整个学校的信息，则传空
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  file_count:
+                    type: string
+                    description: 收集数据总量
+                  today_file_count:
+                    type: string
+                    description: 今日新增
+                  total_upload_teacher:
+                    type: string
+                    description: 上传总人数
+                  total_noupload_teacher:
+                    type: string
+                    description: 未上传人数
+
+  /api/schooldisk/dayuploadinfo:
+    get:
+      tags:
+        - schooldisk_statistics
+      description: 学校网盘-每日文件上传情况
+      summary: 学校网盘-每日文件上传情况
+      parameters:
+        - name: dir_file_id
+          in: query
+          description: 目录id，如果统计整个学校的信息，则传空
+          type: string
+          required: false
+        - name: startdate
+          in: query
+          description: 开始时间：格式为YYYY-MM-DD
+          type: string
+          required: false
+        - name: enddate
+          in: query
+          description: 结束时间：格式为YYYY-MM-DD
+          type: string
+          required: false
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            type: object
+            properties:
+              c:
+                type: integer
+              m:
+                type: string
+              d:
+                type: object
+                properties:
+                  day_upload_info:
+                    type: string
+                    description: 每天上传的文件数量
+
+  /api/schooldisk/alldirsummary:
+    get:
+      tags:
+        - schooldisk_statistics
+      description: 学校网盘-各文件夹上传总汇
+      summary: 学校网盘-各文件夹上传总汇
+      responses:
+        "200":
+          description: 成功结果
+          schema:
+            $ref: '#/definitions/result'
+
+
+definitions:
+  result:
+    description: 成功操作返回内容
+    type: object
+    properties:
+      c:
+        type: integer
+        description: 响应码
+      m:
+        type: string
+        description: 响应消息提示
+
+
+
+  school:
+    description: 学校定义
+    type: object
+    allOf:
+      - type: object
+        properties:
+          school_id:
+            type: string
+            description: 学校ID
+          school_name:
+            type: string
+            description: 学校名称
+          school_code:
+            type: string
+            description: 学校代码
+
+
+  clazz:
+    description: 班级定义
+    type: object
+    allOf:
+      - type: object
+        properties:
+          clazz_id:
+            type: string
+            description: 班级ID
+          clazz_num:
+            type: string
+            description: 班级序号
+          clazz_name:
+            type: string
+            description: 班级名字
+          clazz_grade_name:
+            type: string
+            description: 所在年级名称
+          clazz_grade_num:
+            type: string
+            description: 所在年级序号
+          clazz_is_graduate:
+            type: string
+            description: 是否毕业
+          clazz_alias:
+            type: string
+            description: 班级别名
+
+
+  grade:
+    description: 年级定义
+    type: object
+    allOf:
+      - type: object
+        properties:
+          grade_id:
+            type: string
+            description: 年级ID
+          grade_num:
+            type: string
+            description: 年级序号
+          grade_name:
+            type: string
+            description: 年级名字
+          grade_clazz_list:
+            type: array
+            description: 年级内的班
+            items:
+              $ref: "#/definitions/clazz"
+
+
+  teacher_title:
+    description: 教师头衔
+    type: object
+    allOf:
+      - type: object
+        properties:
+          teacher_title_id:
+            type: string
+            description: 头衔ID
+          teacher_title_name:
+            type: string
+            description: 头衔名称
+
+
+  clazz_managed:
+    description: 班主任带班
+    type: object
+    allOf:
+      - type: object
+        properties:
+          managed_clazz_id:
+            type: string
+            description: 班级ID
+          managed_clazz_name:
+            type: string
+            description: 班级名称
+          managed_clazz_num:
+            type: string
+            description: 班级序号
+          managed_clazz_grade_name:
+            type: string
+            description: 年级名称
+          managed_clazz_grade_num:
+            type: string
+            description: 年级序号
+          managed_clazz_is_graduate:
+            type: string
+            description: 是否毕业
+          managed_clazz_alias:
+            type: string
+            description: 班级别名
+
+
+  teacher:
+    description: 老师
+    type: object
+    allOf:
+      - type: object
+        properties:
+          teacher_id:
+            type: string
+            description: 教师ID
+          teacher_account_id:
+            type: string
+            description: 账号ID
+          teacher_name:
+            type: string
+            description: 教师姓名
+          teacher_avatar:
+            type: string
+            description: 头像
+          teacher_sex:
+            type: string
+            description: 性别
+          teacher_phone:
+            type: string
+            description: 电话
+          teacher_idcard:
+            type: string
+            description: 身份证
+          teacher_workcard:
+            type: string
+            description: 工号
+          teacher_workcard_tmp:
+            type: string
+            description: 临时工号
+          teacher_is_in:
+            type: string
+            description: 是否在校
+      - $ref: "#/definitions/teacher_title"
+      - $ref: "#/definitions/school"
+#      - $ref: "#/definitions/clazz_managed"
+
+
+  student:
+    description: 学生
+    type: object
+    allOf:
+      - type: object
+        properties:
+          student_id:
+            type: string
+            description: 学生ID
+          student_account_id:
+            type: string
+            description: 账号ID
+          student_name:
+            type: string
+            description: 姓名
+          student_avatar:
+            type: string
+            description: 头像
+          student_sex:
+            type: string
+            description: 性别
+          student_phone:
+            type: string
+            description: 电话
+          student_idcard:
+            type: string
+            description: 身份证
+          student_study_code:
+            type: string
+            description: 学号
+          student_is_in:
+            type: string
+            description: 是否在校
+      - $ref: "#/definitions/school"
+#      - $ref: "#/definitions/clazz"
+
+  role_teacher_list:
+    description: 老师列表
+    type: object
+    properties:
+      teacher_id:
+        type: string
+        description: 老师ID
+      teacher_name:
+        type: string
+        description: 老师名称
+      image_url:
+        type: string
+        description: 头像地址
+
+

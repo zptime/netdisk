@@ -1,0 +1,15 @@
+﻿{% extends 'setting.html'%}
+{% block hx-link %}
+    <style>
+        .noauto_tips {
+            padding: 300px 0 50px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block hx-custom %}
+    <div class="noauto_tips">您没有权限进行此操作</div>
+{% endblock %}
+{% block hx-script %}
+{% endblock %}

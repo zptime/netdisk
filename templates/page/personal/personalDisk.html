@@ -1,0 +1,29 @@
+{% extends 'page/index.html' %}
+{% block hx-extendcontent %}
+    <div id="main">
+        <div @click="showPersonalDiskFileFolder"
+             style="border:1px solid blue;border-radius:0.5rem;width: fit-content;padding: 2px 3px 2px 3px;">选择个人网盘
+        </div>
+        <div id="personalDiskPopupWindows" class="untreatedArea" style="display: none">
+            <!--div class="untreated" v-for="item in untreated_list">
+                <div class="untreated_left">
+                    <img :src="item.avatar" v-if="item.avatar">
+                    <img src="/static/resources/images/icon/photo-default.png" v-else>
+                </div>
+                <div class="untreated_right">
+                    <span class="">{$ item.username $}</span>
+                    <span class="">{$ item.description $}</span>
+                    <span class="">{$ item.create_time $}</span>
+                </div>
+                <div class="untreated_statu">未处理</div>
+            </div-->
+            <div>测试layer界面</div>
+        </div>
+    </div>
+{% endblock %}
+{% block hx-extendscript %}
+    <script>
+        document.write('<script src="/static/resources/js/personalDisk.js?rnd=' + Math.random() + '"><' + '/script>');
+        document.write(" <link rel='stylesheet' href='/static/resources/css/personal_disk.css?rnd= " + Math.random() + " '>");
+    </script>
+{% endblock %}

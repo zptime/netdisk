@@ -1,0 +1,11 @@
+/opt/virt/netdisk/netdisk/log/django.log{
+    missingok  
+    create 0640 root root  
+    rotate 100
+    size=20M
+    copytruncate
+    prerotate  
+    endscript  
+    postrotate  
+    endscript  
+}

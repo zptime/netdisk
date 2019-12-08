@@ -1,0 +1,38 @@
+/**
+ * Created by jie on 2017/9/18
+ */
+
+var dj = new DjangoResumable({
+    xhrfile:{
+        loaded: function(){ //('implements your file loaded callback code here...');
+        },
+        beforeStart: function () { //('implements check conditions code here...')
+        },
+        start: function () { //('implements your file start callback code here...');
+        },
+        error: function (data) { //('implements your file error callback code here...');
+        },
+        added: function () { //('implements your file added callback code here...');
+        },
+        success: function (data) { //('implements your file success callback code here...');
+        },
+        progress: function (data) { //('implements your file progress callback code here...');
+        },
+        remove: function(data){ //('implements your file remove callback code here...');
+        }
+    },
+    view:{
+        container: document.getElementById('reUpload'),  //DOM节点
+        addBtn: true, //添加文件开关
+        startBtn: true, //开始上传开关
+        dragable: true, //拖拽开关
+        /*
+        colNames: ['拓展列1','拓展列2'...],  //表头thead拓展的td列
+        colModel: [
+            {name: 'name1', formatter: function(args){}},  //拓展列1展示值（函数）
+            {name: 'name2', formatter: function(args){}},  //拓展列2展示值（函数）
+            ...
+        ]
+        **/
+    }
+});

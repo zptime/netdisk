@@ -1,0 +1,87 @@
+
+<!--教材弹出框-->
+<div id="acc-modal-textbook" class="acc-modal-textbook" style="display: none;">
+    <!--管理教材-->
+    <div class="modal-1">
+        <div>
+            <div class="d-title">
+               当前教材
+            </div>
+            <div class="s-box noback">
+            </div>
+        </div>
+        <div class="own-list">
+            <div class="d-title">
+                所授教材
+            </div>
+            <div class="d-box">
+{#                <ul>#}
+{#                    <li>#}
+{#                        <div class="s-box">#}
+{#                            <span class="s-subject"></span>#}
+{#                            <span class="s-name"></span>#}
+{#                            <el class="remove">×</el>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                </ul>#}
+            </div>
+        </div>
+        <div class="bottom-btn-box">
+            <button type="button" class="add-btn">添加教材</button>
+            <button type="button" class="close-btn">关闭</button>
+        </div>
+    </div>
+    <!--添加教材-->
+    <div class="modal-2" style="display: none;">
+        <div>
+            <table style="border-collapse:separate; border-spacing:20px">
+                <tr>
+                    <td>
+                        <label>年级</label>
+                    </td>
+                    <td>
+                        <select name="m2-grade" style="width:318px;">
+                            <option value="">--请选择--</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>科目</label>
+                    </td>
+                    <td>
+                        <select name="m2-subject" style="width:318px">
+                            <option value="">--请选择--</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="required" for="CH_m2-textbook">教材</label>
+                    </td>
+                    <td>
+                        <select name="m2-textbook" style="width:318px;" check="CH_m2-textbook">
+                            <option value="">--请选择--</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom-btn-box">
+            <button type="button" class="confirm-btn">确定</button>
+            <button type="button" class="cancel-btn">取消</button>
+        </div>
+    </div>
+    <!--删除教材-->
+    <div class="modal-3" style="display: none;">
+        <p class="alarm-info">
+            删除教材并保留相关资源，下次添加时相关资源依然存在无需再次上传！
+        </p>
+        <input name="m3-textbook-id" type="hidden">
+        <div class="bottom-btn-box">
+            <button type="button" class="confirm-btn">确定</button>
+            <button type="button" class="cancel-btn">取消</button>
+        </div>
+    </div>
+
+</div>

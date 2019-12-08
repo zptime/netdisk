@@ -1,0 +1,80 @@
+
+<!--班级弹出框-->
+<div id="acc-modal-class"  class="acc-modal-class" style="display: none;">
+    <!--管理班级-->
+    <div class="modal-1">
+        <div class="own-list">
+            <div class="d-title">
+                所授班级
+            </div>
+            <div class="d-box">
+{#                <ul>#}
+{#                    <li>#}
+{#                        <div class="s-box">#}
+{#                            <span class="s-subject"></span>#}
+{#                            <span class="s-name"></span>#}
+{#                            <el class="remove">×</el>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                </ul>#}
+            </div>
+        </div>
+        <div class="bottom-btn-box">
+            <button type="button" class="add-btn">添加班级</button>
+            <button type="button" class="close-btn">关闭</button>
+        </div>
+    </div>
+    <!--添加班级-->
+    <div class="modal-2" style="display: none;">
+        <div>
+            <div class="update-class-box">
+                <div class="left-menu">
+                    <ul>
+{#                        <li onclick="filter_class_list(this)" grade-id="1">一年级</li>#}
+                    </ul>
+                </div>
+                <div class="right-class">
+                    <div class="card-box">
+                        <div class="one-card">
+                            <div class="card-core">
+                                <ul>
+{#                                    <li onclick="choose_class(this)" class-id="">#}
+{#                                        <div class="one-little-box">#}
+{#                                            <div class="div-box">#}
+{#                                                <img class="middle-img" src="/static/resources/common/resources/images/class-default.png">#}
+{#                                                <div class="middle-context">#}
+{#                                                    <div class="class-name">#}
+{#                                                        一年级1班#}
+{#                                                    </div>#}
+{#                                                    <div class="class-num">#}
+{#                                                        0人#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </li>#}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-btn-box">
+            <button type="button" class="confirm-btn">确定</button>
+            <button type="button" class="cancel-btn">取消</button>
+        </div>
+    </div>
+    <!--删除班级-->
+    <div class="modal-3" style="display: none;">
+        <p class="alarm-info">
+            不再授课班级，不在授课！
+        </p>
+        <input name="m3-class-id" type="hidden">
+        <div class="bottom-btn-box">
+            <button type="button" class="confirm-btn">确定</button>
+            <button type="button" class="cancel-btn">取消</button>
+        </div>
+    </div>
+
+</div>
